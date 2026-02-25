@@ -8,7 +8,7 @@ class UI extends Phaser.Scene
 
     create()
     {
-        this.add.rectangle(width/2,playHeight,width,height/3,'#ffffff').setOrigin(0.5,0)
+        this.add.image(0,playHeight,'hudImg').setOrigin(0,0)
         
     }
 }
