@@ -10,13 +10,18 @@ class ClickableObject extends Phaser.GameObjects.Image
             alphaTolerance: 1  
         })
       
-         // hover feedback (optional)
-        this.on('pointerover', () => this.setAlpha(0.85));
-        this.on('pointerout',  () => this.setAlpha(1));
+         // hover feedback
+        this.on('pointerover', () => {
+            this.setAlpha(0.85)
+            this.setScale(1.05)
+        });
+        this.on('pointerout',  () => {
+            this.setAlpha(1)
+            this.setScale(1)
+        });
 
         // click behavior
         this.on('pointerdown', () => {
-        // local behavior (the object reacts)
         this.setVisible(false);
         this.disableInteractive();
         })
