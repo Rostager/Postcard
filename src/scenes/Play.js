@@ -9,10 +9,6 @@ class Play extends Phaser.Scene
         super("playScene")
     }
 
-    preload()
-    {
-        this.load.image('testImg','./assets/images/testImg.webp')
-    }
     create()
     {
         console.log(playHeight + "  " + playWidth)
@@ -25,6 +21,8 @@ class Play extends Phaser.Scene
         this.testImage.on('pointerdown',()=>{
             this.testImage.visible = false
         })
+
+        this.scene.launch('uiScene')
     }
 
 
