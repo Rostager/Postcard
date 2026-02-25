@@ -4,9 +4,9 @@
 
 let config = {
     type: Phaser.AUTO,
-    width: 1280, //720
-    height: 720, //1280
-    backgroundColor: '#ffffff',
+    width: 960, //720
+    height: 540, //1280
+    backgroundColor: '#ff0000',
     scale: {
     mode: Phaser.Scale.FIT,          // fit inside available space
     autoCenter: Phaser.Scale.CENTER_BOTH
@@ -17,7 +17,9 @@ let config = {
         debug: false
         },
     },
-    scene: [Menu]
+    scene: [Play,Menu]
 }
 let game = new Phaser.Game(config); 
 const {width,height} = game.config
+const playHeight = height * 2/3
+const playWidth = width //might not need this
