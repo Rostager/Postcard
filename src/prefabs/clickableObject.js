@@ -1,6 +1,6 @@
 class ClickableObject extends Phaser.GameObjects.Image
 {
-    constructor(scene,x,y,key)
+    constructor(scene,x,y,key,description)
     {
         super(scene,x,y,key)
         this.setOrigin(0.5,0.5)
@@ -20,10 +20,10 @@ class ClickableObject extends Phaser.GameObjects.Image
             this.setScale(1)
         });
 
-        // click behavior
+        // click behavior, get the text from the ui scene and set it to description string.
         this.on('pointerdown', () => {
-        this.setVisible(false);
-        this.disableInteractive();
+            console.log(description) 
+            this.scene.scene.get('uiScene').descriptionText.setText(description)
         })
     
     }
