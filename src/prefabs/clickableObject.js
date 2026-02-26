@@ -12,18 +12,18 @@ class ClickableObject extends Phaser.GameObjects.Image
       
          // hover feedback
         this.on('pointerover', () => {
-            this.setAlpha(0.85)
-            this.setScale(1.05)
+            this.setScale(1.10)
+            //perhaps play a sound
         });
         this.on('pointerout',  () => {
-            this.setAlpha(1)
             this.setScale(1)
         });
 
         // click behavior, get the text from the ui scene and set it to description string.
         this.on('pointerdown', () => {
             console.log(description) 
-            this.scene.scene.get('uiScene').descriptionText.setText(description)
+           
+            this.scene.scene.get('uiScene').typewriterEffect(description)
         })
     
     }
