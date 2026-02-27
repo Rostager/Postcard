@@ -6,11 +6,23 @@ class Load extends Phaser.Scene
 
     preload()
     {
-       this.load.image('testImg','./assets/images/testImg.webp')
+       //load images
+       this.load.image('testImg','./assets/images/testImg.png')
+       this.load.image('hudImg','./assets/images/Hud.png')
+       this.load.image('testBG','./assets/images/testBG.png')
+       this.load.image('backArrow','./assets/images/backArrow.png')
+       this.load.image('introBG','./assets/images/introBG.png')
+       this.load.image('postcardFront','./assets/images/postcardFront.png')
+       this.load.image('postcardBack','./assets/images/postcardBack.png')
+       this.load.image('introEnvelope','./assets/images/intro-Envelope.png')
+       //load audio
+       
+       //load fonts
+       this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }
 
     create()
     {
-        this.scene.start('playScene')
+        this.scene.start('introScene')
     }
 }

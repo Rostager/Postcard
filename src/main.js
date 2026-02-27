@@ -11,13 +11,7 @@ let config = {
     mode: Phaser.Scale.FIT,          // fit inside available space
     autoCenter: Phaser.Scale.CENTER_BOTH
     },
-     physics: {
-        default: 'arcade',
-        arcade:{
-        debug: false
-        },
-    },
-    scene: [Load,Play,Menu,UI]
+    scene: [Load,Intro,Play,Menu,UI]
 }
 let game = new Phaser.Game(config); 
 const {width,height} = game.config
