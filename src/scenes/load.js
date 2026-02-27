@@ -11,6 +11,10 @@ class Load extends Phaser.Scene
        this.load.image('hudImg','./assets/images/Hud.png')
        this.load.image('testBG','./assets/images/testBG.png')
        this.load.image('backArrow','./assets/images/backArrow.png')
+       this.load.image('introBG','./assets/images/introBG.png')
+       this.load.image('postcardFront','./assets/images/postcardFront.png')
+       this.load.image('postcardBack','./assets/images/postcardBack.png')
+       this.load.image('introEnvelope','./assets/images/intro-Envelope.png')
        //load audio
        
        //load fonts
@@ -19,7 +23,6 @@ class Load extends Phaser.Scene
 
     create()
     {
-        this.ui =  this.scene.launch('uiScene')
-        this.scene.start('playScene')
+        this.scene.start('introScene')
     }
 }

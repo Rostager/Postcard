@@ -11,8 +11,8 @@ class UI extends Phaser.Scene
 
     create()
     {
-        
-        
+        //hide cursor
+         this.input.setDefaultCursor('none')
 
         //The hud and text
         this.add.image(0,playHeight,'hudImg').setOrigin(0,0)
@@ -39,6 +39,7 @@ class UI extends Phaser.Scene
             this.typewriterEvent = null;
             this.descriptionText.setText('')
     }
+        //Switch statement for the backarrow, works with a switch statement to check the scene its in then passes the scene it wants to go to.
             switch(this.otherScene.scene.key)
             {
                 case 'playScene':
@@ -50,6 +51,15 @@ class UI extends Phaser.Scene
 
             }
         })
+
+        //Create the cursor image, NEED TO BE AT THE BOTTOM SO IT HAS THE HIGHEST LAYER ORDERING
+        this.cursorImage = this.add.image(0,0,'testImg')
+    }
+
+    update()
+    {
+        this.cursorImage.setX(this.input.activePointer.x)
+        this.cursorImage.setY(this.input.activePointer.y)
     }
 
     //Took from my rocket-patrol mod and modifided a bit so it doesnt break when a player spams an object, I knew this would come in handy again!!!! Maybe we finally make it (text,location) but idk.
