@@ -1,12 +1,8 @@
-//pointer events that we will prob use
-//1. 'pointerdown' for clicking
-//2. 'pointerover' for hoving
-
-class Play extends Phaser.Scene
+class StairWell extends Phaser.Scene
 {
     constructor()
     {
-        super("playScene")
+        super("stairWellScene")
     }
 
     create()
@@ -15,12 +11,10 @@ class Play extends Phaser.Scene
        this.sceneBG = this.add.image(width/2,playHeight/2,'testBG')
         //Object examples of making a clickable object and FindableObject
         this.testImage2 = new ClickableObject(this,100,250,'testImg',"A Brave wariors remains...\n I wonder why he left his\n weapon? Maybe he became \n a monk?")
-        this.toTowerDoor = new DoorWay(this,400,250,'testImg','towerDoorScene' )
-        if(!this.scene.manager.getScene('uiScene').itemsFound[0])
-        {
-            this.testImage3 = new FindableObject(this,850,250,'testImg','introScene',0)
-        }
-       
+        this.toMichaelsRoom = new DoorWay(this,600,250,'testImg','michaelRoomScene')
+        this.toRobertsRoom = new DoorWay(this,100,300,'testImg','robertRoomScene')
+
+        
       //this needs to be in a scene we dont go back to , like between the menu and first play scene, this will keep relaunching a new ui  
      // this.ui =  this.scene.launch('uiScene')
     }

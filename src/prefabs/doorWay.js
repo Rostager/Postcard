@@ -13,12 +13,12 @@ class DoorWay extends Phaser.GameObjects.Image
          // hover feedback
         this.on('pointerover', () => {
             this.setScale(1.10)
-            this.scene.scene.get('uiScene').cursorImage.setTexture('backArrow');
+            this.scene.scene.get('uiScene').cursorImage.setTexture('pointerHover')
             //perhaps play a sound
         });
         this.on('pointerout',  () => {
             this.setScale(1)
-            this.scene.scene.get('uiScene').cursorImage.setTexture('testImg');
+            this.scene.scene.get('uiScene').cursorImage.setTexture('pointerDefault')
         });
 
         // click behavior, get the text from the ui scene and set it to description string.

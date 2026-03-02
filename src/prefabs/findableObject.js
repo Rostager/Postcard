@@ -8,7 +8,6 @@ class FindableObject extends ClickableObject
         this.on('pointerdown', () => {
             this.scene.scene.get('uiScene').foundImportantItem(iDNumber)
             this.scene.scene.start(tranScene)
-            this.scene.scene.get('uiScene').cursorImage.setTexture('testImg')
         })
     }
 }
