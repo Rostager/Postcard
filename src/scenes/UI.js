@@ -24,36 +24,45 @@ class UI extends Phaser.Scene
         //UI images for important object the player finds
         this.michaelImportant1 = this.add.image(620,playHeight+40,'testImg').setOrigin(0.5,0.5).setAlpha(0)
 
-        //backarrow stuff
-        this.backArrow = this.add.image(50,50,'backArrow').setOrigin(0.5,0.5)
-        this.backArrow.setInteractive({
-            pixelPerfect: true,
-            alphaTolerance: 1  
-        })
-        //when I click the back arrow, it takes me to the last active scene,
-        this.backArrow.on('pointerdown',()=>{
-            this.otherScene = this.scene.manager.getScenes(true).find(scene => scene !== this);
-           //Checks if type writer effect is still running, and if so kill it >:Dy
-            if (this.typewriterEvent) {
-            this.typewriterEvent.remove(false);
-            this.typewriterEvent = null;
-            this.descriptionText.setText('')
-    }
-        //Switch statement for the backarrow, works with a switch statement to check the scene its in then passes the scene it wants to go to.
-            switch(this.otherScene.scene.key)
-            {
-                case 'playScene':
-            this.otherScene.scene.start('menuScene')
-            break;
-                case 'menuScene':
-            this.otherScene.scene.start('playScene')
-            break;
+    //     //backarrow stuff NOT SURE WE WANT IT ANYMORE
+    //     this.backArrow = this.add.image(50,50,'backArrow').setOrigin(0.5,0.5)
+    //     this.backArrow.setInteractive({
+    //         pixelPerfect: true,
+    //         alphaTolerance: 1  
+    //     })
+    //     //when I click the back arrow, it takes me to the last active scene,
+    //     this.backArrow.on('pointerdown',()=>{
+    //         this.otherScene = this.scene.manager.getScenes(true).find(scene => scene !== this);
+    //        //Checks if type writer effect is still running, and if so kill it >:Dy
+    //         if (this.typewriterEvent) {
+    //         this.typewriterEvent.remove(false);
+    //         this.typewriterEvent = null;
+    //         this.descriptionText.setText('')
+    // }
+    //     //Switch statement for the backarrow, works with a switch statement to check the scene its in then passes the scene it wants to go to.
+    //         switch(this.otherScene.scene.key)
+    //         {
+    //             case 'playScene':
+    //        // this.otherScene.scene.start('menuScene')
+    //         break;
+    //             case 'menuScene':
+    //         this.otherScene.scene.start('playScene')
+    //         break;
+    //         case "towerDoorScene":
+    //             this.otherScene.scene.start('playScene')
 
-            }
-        })
+    //         }
+        //})
 
         //Create the cursor image, NEED TO BE AT THE BOTTOM SO IT HAS THE HIGHEST LAYER ORDERING
-        this.cursorImage = this.add.image(0,0,'testImg')
+        this.cursorImage = this.add.image(0,0,'pointerDefault').setOrigin(0,0)
+
+        this.input.on('pointerdown',()=>{
+            this.cursorImage.setTexture('pointerHold')
+        })
+        this.input.on('pointerup',()=>{
+            this.cursorImage.setTexture('pointerDefault')
+        })
     }
 
     update()

@@ -7,24 +7,37 @@ class Intro extends Phaser.Scene
     create()
     {
         this.backgroundImage = this.add.image(width/2,height/2,'introBG').setOrigin(0.5,0.5)
-        this.postcard = this.add.image(width/2,height/2,'postcardFront')
-        this.postcard.setInteractive({
-             pixelPerfect: true,
+        this.envelope = this.add.image(width/2,height/2,'introEnvelope').setOrigin(0.5,0.5).setInteractive({
+            pixelPerfect: true,
             alphaTolerance: 1
         })
+        this.postcard = this.add.image(width/2,height/2,'postcardFront').setAlpha(0)
+        //I lowkey need to explain the envelope, the way its setup 
+        
+        this.envelope.on('pointerdown',()=>{
+            this.envelope.disableInteractive()
+            this.postcard.setInteractive({
+                 pixelPerfect: true,
+                 alphaTolerance: 1
+        })
+        this.postcard.setAlpha(1)
+        
+        })
+
+        
         //This handles clicking the postcard, flipping it, spinning and sucking the player into it then opening a new scene.
     this.postcard.on('pointerdown', () => {
-    this.postcard.disableInteractive();
+    this.postcard.disableInteractive()
 
     this.tweens.add({
         targets: this.postcard,
         scaleX: 0,
         duration: 300,
-        ease: 'Linear',
+        ease: 'cubic.easeIn',
         yoyo: true,
 
         onYoyo: () => {
-            this.postcard.setTexture('postcardBack');
+            this.postcard.setTexture('postcardBack')
         },
 
         onComplete: () => {
@@ -36,9 +49,10 @@ class Intro extends Phaser.Scene
                 duration: 1000,
                 ease: 'Cubic.easeIn',
 
-        onComplete: ()=>{ this.scene.start('playScene') }
+        onComplete: ()=>{ 
+            this.scene.start('playScene')
+            this.ui =  this.scene.launch('uiScene') }
             })
-
             })
         }
     })
