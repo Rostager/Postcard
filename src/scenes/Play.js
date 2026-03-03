@@ -20,9 +20,6 @@ class Play extends Phaser.Scene
         {
             this.testImage3 = new FindableObject(this,850,250,'testImg','introScene',0)
         }
-       
-      //this needs to be in a scene we dont go back to , like between the menu and first play scene, this will keep relaunching a new ui  
-     // this.ui =  this.scene.launch('uiScene')
     }
 
 

@@ -14,9 +14,6 @@ class StairWell extends Phaser.Scene
         this.toMichaelsRoom = new DoorWay(this,600,250,'testImg','michaelRoomScene')
         this.toRobertsRoom = new DoorWay(this,100,300,'testImg','robertRoomScene')
 
-        
-      //this needs to be in a scene we dont go back to , like between the menu and first play scene, this will keep relaunching a new ui  
-     // this.ui =  this.scene.launch('uiScene')
     }
 
 

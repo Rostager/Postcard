@@ -6,7 +6,7 @@ class Load extends Phaser.Scene
 
     preload()
     {
-       //load images
+       //load images---------------
        this.load.image('testImg','./assets/images/testImg.png')
        this.load.image('hudImg','./assets/images/Hud.png')
        this.load.image('testBG','./assets/images/testBG.png')
@@ -18,9 +18,15 @@ class Load extends Phaser.Scene
        this.load.image('pointerDefault','./assets/images/Pointer.png')
        this.load.image('pointerHover','./assets/images/Hover.png')
        this.load.image('pointerHold','./assets/images/Hold.png')
-       //load audio
+       //Michaels room
+        this.load.image('michaelRoomBG','./assets/images/MichaelRoom/MichaelsRoomBG.png')
+        this.load.image('michaelComputer','./assets/images/MichaelRoom/computer.png')
+        this.load.image('michaelFurnace','./assets/images/MichaelRoom/furnace.png')
+        this.load.image('michaelPillow','./assets/images/MichaelRoom/Pillow.png')
+        this.load.image('michaelShield','./assets/images/MichaelRoom/shield.png')
+       //load audio------------------
        
-       //load fonts
+       //load fonts------------------
        this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }
 

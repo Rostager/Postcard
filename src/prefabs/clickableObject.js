@@ -3,7 +3,7 @@ class ClickableObject extends Phaser.GameObjects.Image
     constructor(scene,x,y,key,description)
     {
         super(scene,x,y,key)
-        this.setOrigin(0.5,0.5)
+        this.setOrigin(0,0)
         scene.add.existing(this)
         this.setInteractive({
             pixelPerfect: true,

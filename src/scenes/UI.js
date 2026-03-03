@@ -1,3 +1,4 @@
+//TODO: MAKE A DEBUG THAT SHOWS THE POINTERS LOCATION, CAN HELP WITH PLACING ITEMS
 class UI extends Phaser.Scene
 {
     constructor()
@@ -22,7 +23,7 @@ class UI extends Phaser.Scene
         })
 
         //UI images for important object the player finds
-        this.michaelImportant1 = this.add.image(620,playHeight+40,'testImg').setOrigin(0.5,0.5).setAlpha(0)
+        this.michaelImportant1 = this.add.image(620,playHeight+40,'michaelShield').setOrigin(0.5,0.5).setAlpha(0)
 
     //     //backarrow stuff NOT SURE WE WANT IT ANYMORE
     //     this.backArrow = this.add.image(50,50,'backArrow').setOrigin(0.5,0.5)

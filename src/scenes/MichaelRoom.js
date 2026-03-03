@@ -8,13 +8,13 @@ class MichaelRoom extends Phaser.Scene
     create()
     {
         //Background 
-       this.sceneBG = this.add.image(width/2,playHeight/2,'testBG')
+       this.sceneBG = this.add.image(width/2,playHeight/2,'michaelRoomBG')
         //Object examples of making a clickable object and FindableObject
-        this.testImage2 = new ClickableObject(this,100,250,'testImg',"A Brave wariors remains...\n I wonder why he left his\n weapon? Maybe he became \n a monk?")
+        this.michaelPillow = new ClickableObject(this,246,216,'michaelPillow',"A pile of blue pillows...\n Something feels innoccent \n in the color.")
+        this.michaelComputer = new ClickableObject(this,776,147,'michaelComputer',"A pile of blue pillows...\n Something feels innoccent \n in the color.")
+        this.michaelFurnace = new ClickableObject(this,-16,-44,'michaelFurnace',"A pile of blue pillows...\n Something feels innoccent \n in the color.")
+        this.michaelShield = new FindableObject(this,718,96,'michaelShield','stairWellScene',0)
        
-        
-      //this needs to be in a scene we dont go back to , like between the menu and first play scene, this will keep relaunching a new ui  
-     // this.ui =  this.scene.launch('uiScene')
     }
 
 

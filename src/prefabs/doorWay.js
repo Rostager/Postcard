@@ -3,7 +3,7 @@ class DoorWay extends Phaser.GameObjects.Image
     constructor(scene,x,y,key,tranScene)
     {
         super(scene,x,y,key)
-        this.setOrigin(0.5,0.5)
+        this.setOrigin(0)
         scene.add.existing(this)
         this.setInteractive({
             pixelPerfect: true,
