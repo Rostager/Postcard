@@ -13,7 +13,7 @@ class MichaelRoom extends Phaser.Scene
         this.michaelPillow = new ClickableObject(this,246,216,'michaelPillow',"A pile of blue pillows...\n Something feels innoccent \n in the color.")
         this.michaelComputer = new ClickableObject(this,776,147,'michaelComputer',"A pile of blue pillows...\n Something feels innoccent \n in the color.")
         this.michaelFurnace = new ClickableObject(this,-16,-44,'michaelFurnace',"A pile of blue pillows...\n Something feels innoccent \n in the color.")
-        this.michaelShield = new FindableObject(this,718,96,'michaelShield','stairWellScene',0)
+        this.michaelShield = new FindableObject(this,718,96,'michaelShield','shieldCloseUpScene',0)
        
     }
 
