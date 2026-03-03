@@ -7,11 +7,9 @@ class ShieldCloseUp extends Phaser.Scene
     create()
     {
          this.sceneBG = this.add.image(width/2,playHeight/2,'michaelShieldCloseUp')
-
-         this.Backbutton = this.add.image(playWidth-80,playHeight-80,'backArrow')
-         this.Backbutton.setInteractive({
+         this.backButton = new BackButton(this,playWidth - 200,  40,'michaelRoomScene')
             
-         })
+    
 
     }
 }
