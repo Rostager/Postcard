@@ -18,6 +18,9 @@ class MichaelRoom extends Phaser.Scene {
          if (!this.scene.manager.getScene('uiScene').itemsFound[1]) {
             this.michaelFurnace = new FindableObject(this, -16, -44, 'michaelFurnace','furnaceCloseUpScene',1)
         }
+        else{
+             this.michaelFurnace = new ClickableObject(this, -16, -44, 'michaelFurnace','the furnace doesnt burn as \n hot anymore.')
+        }
 
 
     }

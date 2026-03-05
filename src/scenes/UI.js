@@ -107,14 +107,24 @@ class UI extends Phaser.Scene
     this.itemsFound[0] = true
         break;
     case 1:
+        this.michaelImportant1.setAlpha(1)
+    this.itemsFound[1] = true
         break;
     case 2:
+
+    this.itemsFound[2] = true
         break;
     case 3:
+
+    this.itemsFound[3] = true
         break;
     case 4:
+
+    this.itemsFound[4] = true
         break;
     case 5:
+
+    this.itemsFound[5] = true
         break;
     }
     
