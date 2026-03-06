@@ -1,8 +1,8 @@
-class ClickableObject extends Phaser.GameObjects.Image
+class BackButton extends Phaser.GameObjects.Image
 {
-    constructor(scene,x,y,key,description)
+     constructor(scene,x,y,tranScene)
     {
-        super(scene,x,y,key)
+        super(scene,x,y,'backArrow')
         this.setOrigin(0,0)
         scene.add.existing(this)
         this.setInteractive({
@@ -25,10 +25,9 @@ class ClickableObject extends Phaser.GameObjects.Image
 
         // click behavior, get the text from the ui scene and set it to description string.
         this.on('pointerdown', () => {
-            console.log(description) 
-            this.scene.scene.get('uiScene').typewriterEffect(description)
-        })
-    
+            
+            this.scene.scene.start(tranScene)
+            
+      })
     }
-
 }
