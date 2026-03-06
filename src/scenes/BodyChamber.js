@@ -1,8 +1,8 @@
-class RobertRoom extends Phaser.Scene
+class BodyChamber extends Phaser.Scene
 {
     constructor()
     {
-        super("robert-room")
+        super("robert-bodyChamber")
     }
 
     create()
@@ -11,7 +11,7 @@ class RobertRoom extends Phaser.Scene
         this.sceneBG = this.add.image(width/2,playHeight/2,'testBG')
         //Object examples of making a clickable object and FindableObject (hover class call to see parameters )
         this.testImage2 = new ClickableObject(this,100,250,'testImg',"Robert Room.\n I wonder why he left his\n weapon? Maybe he became \n a monk?")
-       this.toRobertRoomDoor = new DoorWay(this,700,250,'testImg','robert-bodyChamber')
+       
     }
 
 
