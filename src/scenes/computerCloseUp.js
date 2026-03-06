@@ -8,6 +8,7 @@ class ComputerCloseUp extends Phaser.Scene
     {
          this.sceneBG = this.add.image(width/2,playHeight/2,'michaelComputerBG')
          this.backButton = new BackButton(this,playWidth - 200,  40,'michaelRoomScene')
+         this.imgFile = new ClickableObject(this,100,100,'michaelImgFile')
             
     
 
