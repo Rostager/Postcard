@@ -15,7 +15,7 @@ class Play extends Phaser.Scene
         //Background 
         this.sceneBG = this.add.image(width/2,playHeight/2,'devBG')
         //Object examples of making a clickable object and FindableObject
-        this.testImage2 = new ClickableObject(this,100,250,'testImg',"A Brave wariors remains...\n I wonder why he left his\n weapon? Maybe he became \n a monk?")
+        this.testImage2 = new DoorWay(this,100,250,'michaelComputer','michaelRoomScene')
         this.toTowerDoor = new DoorWay(this,400,250,'testImg','towerDoorScene' )
         this.toRobertRoomDoor = new DoorWay(this,700,250,'testImg','robert-room' )
         //Dev Stuff DeleteLater -------------------------------------------
