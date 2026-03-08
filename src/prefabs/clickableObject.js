@@ -1,4 +1,4 @@
-class ClickableObject extends Phaser.GameObjects.Image
+class ClickableObject extends Phaser.GameObjects.Sprite
 {
     constructor(scene,x,y,key,description)
     {

@@ -1,4 +1,4 @@
-class BackButton extends Phaser.GameObjects.Image
+class BackButton extends Phaser.GameObjects.Sprite
 {
      constructor(scene,x,y,tranScene)
     {

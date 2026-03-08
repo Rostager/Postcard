@@ -31,6 +31,7 @@ class Load extends Phaser.Scene
         this.load.image('michaelCreationFile','./assets/images/MichaelRoom/CreationFile.png')
         this.load.image('michaelImgFile','./assets/images/MichaelRoom/computerFile.png')
         //load spritesheets---------------
+        this.load.spritesheet('mailBox','./assets/images/RobertRoom/MaleBoxAnimatedV2.png',{frameWidth: 180, frameHeight: 250})
        //load audio------------------
        
        //load fonts------------------
@@ -39,6 +40,13 @@ class Load extends Phaser.Scene
 
     create()
     {
+        //create animations----------------
+            this.anims.create({
+                key: 'mailBoxAnim',
+                frames: this.anims.generateFrameNumbers('mailBox',{start: 0, end: 1}),
+                frameRate: 4,
+                repeat: -1
+            })
         this.scene.start('introScene')
     }
 }
