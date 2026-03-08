@@ -18,6 +18,7 @@ class Load extends Phaser.Scene
        this.load.image('pointerDefault','./assets/images/Pointer.png')
        this.load.image('pointerHover','./assets/images/Hover.png')
        this.load.image('pointerHold','./assets/images/Hold.png')
+       this.load.image('devBG','./assets/images/RobertRoom/DevScene.png')
        //Michaels room
         this.load.image('michaelRoomBG','./assets/images/MichaelRoom/MichaelsRoomBG.png')
         this.load.image('michaelComputer','./assets/images/MichaelRoom/computer.png')
