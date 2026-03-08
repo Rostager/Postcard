@@ -28,6 +28,8 @@ class Load extends Phaser.Scene
         this.load.image('michaelShieldCloseUp','./assets/images/MichaelRoom/michaelShieldCloseUp.png')
         this.load.image('michaelComputerBG','./assets/images/MichaelRoom/ComputerBG.png')
         this.load.image('michaelFurnaceCloseUp','./assets/images/MichaelRoom/FurnaceCloseUp.png')
+        this.load.image('michaelCreationFile','./assets/images/MichaelRoom/CreationFile.png')
+        this.load.image('michaelImgFile','./assets/images/MichaelRoom/computerFile.png')
        //load audio------------------
        
        //load fonts------------------
