@@ -12,7 +12,7 @@ class RobertRoom extends Phaser.Scene
         //Object examples of making a clickable object and FindableObject (hover class call to see parameters )
         this.testImage2 = new ClickableObject(this,100,250,'testImg',"Robert Room.\n I wonder why he left his\n weapon? Maybe he became \n a monk?")
         this.toRobertRoomDoor = new DoorWay(this,700,250,'testImg','robert-bodyChamber')
-        this.maleBox = new FindableObject(this, 718, 96, 'mailBox', 'shieldCloseUpScene', 0)
+        this.maleBox = new FindableObject(this, 400, 100, 'mailBox', 'shieldCloseUpScene', 0)
         this.maleBox.anims.play('mailBoxAnim')
     }
 

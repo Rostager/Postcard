@@ -12,17 +12,28 @@ class Play extends Phaser.Scene
     create()
     {
         
-        //Dev Stuff DeleteLater -------------------------------------------
-        //Background 
-        this.sceneBG = this.add.image(width/2,playHeight/2,'devBG')
-        //Object examples of making a clickable object and FindableObject
-        this.testImage2 = new DoorWay(this,100,250,'michaelComputer','michaelRoomScene')
-        this.toTowerDoor = new DoorWay(this,400,250,'testImg','towerDoorScene' )
-        this.toRobertRoomDoor = new DoorWay(this,700,250,'testImg','robert-room' )
-        //Dev Stuff DeleteLater -------------------------------------------
-        
-
-        this.maleBox = this.add.sprite(90,125,'mailBox').play('mailBoxAnim')
+        //Background/Unclickable Objects
+        this.sceneBG = this.add.image(width/2,playHeight/2,'playBG')
+        this.cloud1 = this.add.image(0,0,'cloud').setOrigin(0,0)
+        this.towerCloud = this.add.image(391,0,'towerCloud').setOrigin(0,0)
+        //Clickable's
+        this.towerLocked = new ClickableObject(this,459,135,'tower','The tower is locked.\n I wonder how to get in?')
+        //Findables
+        this.maleBox = new FindableObject(this,689,200,'mailBox','shieldCloseUpScene',0).setScale(.5).play('mailBoxAnim')
+        //this.towerCloud =
+        //this.testImage2 = new DoorWay(this,100,250,'michaelComputer','michaelRoomScene')
+        //this.toTowerDoor = new DoorWay(this,400,250,'testImg','towerDoorScene' )
+        //this.toRobertRoomDoor = new DoorWay(this,700,250,'testImg','robert-room' )
+       
+        //Handle Tweens for non clickable objects
+        //Make better, this is for the clouds in the sky
+        this.tweens.add({
+            targets: this.cloud1,
+            x: 960,
+            duration: 8000,
+            yoyo: true,
+            repeat: -1
+        })
         //EXAMPLE OF HOW TO SET UP AN IMPORTANT ITEM TO NOT SPAWN NEXT TIME YOU VISIT THE SCENE.
         //if(!this.scene.manager.getScene('uiScene').itemsFound[0])
        // {

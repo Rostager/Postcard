@@ -31,7 +31,11 @@ class Load extends Phaser.Scene
         this.load.image('michaelCreationFile','./assets/images/MichaelRoom/CreationFile.png')
         this.load.image('michaelImgFile','./assets/images/MichaelRoom/computerFile.png')
         this.load.image('michaelArm','./assets/images/MichaelRoom/michaelArmWhite.png')
-
+        //Play Room
+        this.load.image('playBG','./assets/images/PlayRoom/PlayBG.png')
+        this.load.image('tower','./assets/images/PlayRoom/Tower.png')
+        this.load.image('towerCloud','./assets/images/PlayRoom/TowerCloud.png')
+        this.load.image('cloud','./assets/images/PlayRoom/Cloud.png')
         //load spritesheets---------------
         this.load.spritesheet('mailBox','./assets/images/RobertRoom/MaleBoxAnimatedV2.png',{frameWidth: 180, frameHeight: 250})
        //load audio------------------
@@ -46,7 +50,7 @@ class Load extends Phaser.Scene
             this.anims.create({
                 key: 'mailBoxAnim',
                 frames: this.anims.generateFrameNumbers('mailBox',{start: 0, end: 1}),
-                frameRate: 4,
+                frameRate: 2,
                 repeat: -1
             })
         this.scene.start('introScene')
