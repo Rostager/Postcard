@@ -25,6 +25,11 @@ class MichaelRoom extends Phaser.Scene {
            this.michaelComputer = new DoorWay(this, 776, 147, 'michaelComputer', 'computerCloseUpScene')
         }
 
+        if(this.scene.manager.getScene('uiScene').itemsFound[0] && this.scene.manager.getScene('uiScene').itemsFound[1] && this.scene.manager.getScene('uiScene').itemsFound[2])
+        {
+           // this.michaelShelf = new DoorWay("playScene",)
+        }
+
 
     }
 

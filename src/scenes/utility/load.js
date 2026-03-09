@@ -31,10 +31,12 @@ class Load extends Phaser.Scene
         this.load.image('michaelCreationFile','./assets/images/MichaelRoom/CreationFile.png')
         this.load.image('michaelImgFile','./assets/images/MichaelRoom/computerFile.png')
         this.load.image('michaelArm','./assets/images/MichaelRoom/michaelArmWhite.png')
+        this.load.image('michaelShelf','./assets/images/MichaelRoom/shelf.png')
+        this.load.image('michaelShelfOpen','./assets/images/MichaelRoom/shelfOpen.png')
 
         //load spritesheets---------------
        //load audio------------------
-       
+       this.load.audio('fireSound','./assets/sounds/fire.wav')
        //load fonts------------------
        this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }
