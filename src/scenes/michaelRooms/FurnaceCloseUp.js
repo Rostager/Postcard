@@ -8,5 +8,7 @@ class FurnaceCloseUp extends Phaser.Scene
     {
          this.sceneBG = this.add.image(width/2,playHeight/2,'michaelFurnaceCloseUp')
          this.backButton = new BackButton(this,playWidth - 100,  50,'michaelRoomScene')
+        // this.fireSound = this.sound.add('fireSound')
+        // this.fireSound.play().setLoop(true)
     }
 }

@@ -36,10 +36,13 @@ class Load extends Phaser.Scene
         this.load.image('tower','./assets/images/PlayRoom/Tower.png')
         this.load.image('towerCloud','./assets/images/PlayRoom/TowerCloud.png')
         this.load.image('cloud','./assets/images/PlayRoom/Cloud.png')
+        this.load.image('michaelShelf','./assets/images/MichaelRoom/shelf.png')
+        this.load.image('michaelShelfOpen','./assets/images/MichaelRoom/shelfOpen.png')
+
         //load spritesheets---------------
         this.load.spritesheet('mailBox','./assets/images/RobertRoom/MaleBoxAnimatedV2.png',{frameWidth: 180, frameHeight: 250})
        //load audio------------------
-       
+       this.load.audio('fireSound','./assets/sounds/fire.wav')
        //load fonts------------------
        this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }
