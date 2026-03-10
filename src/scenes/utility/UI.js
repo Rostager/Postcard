@@ -83,7 +83,7 @@ class UI extends Phaser.Scene
     }
 
     let index = 0;
-    const speed = 50;
+    const speed = 10;
 
     this.descriptionText.setText('');
 

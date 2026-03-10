@@ -9,7 +9,12 @@ class MichaelRoom extends Phaser.Scene {
         //Object examples of making a clickable object and FindableObject
         this.michaelPillow = new ClickableObject(this, 246, 216, 'michaelPillow', "A pile of blue pillows...\n Something feels innoccent \n in the color.")
         
-        
+        //PLAY BGM
+        this.bgm = this.sound.add('grassBGM', {
+            loop: true,
+            volume: 0.5
+        });
+        this.bgm.play();
        
 
         //Important Items
@@ -41,6 +46,13 @@ class MichaelRoom extends Phaser.Scene {
 
             
         }
+
+             //USE THIS TO KILL BGM AND OTHER AUDIO
+             this.events.once('shutdown', () => {
+            
+            this.bgm.stop();
+            
+        });
 
     }
 
