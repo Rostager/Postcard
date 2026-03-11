@@ -14,7 +14,7 @@ class Load extends Phaser.Scene
        this.load.image('introBG','./assets/images/introBG.png')
        this.load.image('postcardFront','./assets/images/postcardFront.png')
        this.load.image('postcardBack','./assets/images/postcardBack.png')
-       this.load.image('introEnvelope','./assets/images/intro-Envelope.png')
+       this.load.image('introEnvelope','./assets/images/Intro-Envelope.png')
        this.load.image('pointerDefault','./assets/images/Pointer.png')
        this.load.image('pointerHover','./assets/images/Hover.png')
        this.load.image('pointerHold','./assets/images/Hold.png')
