@@ -7,6 +7,11 @@ class TowerUnlocked extends Phaser.Scene
 
     create()
     {
+        this.bgm = this.sound.add('grassBGM', {
+            loop: true,
+            volume: 0.10
+        });
+        this.bgm.play();
         
         //Background/Unclickable Objects
         this.sceneBG = this.add.image(width/2,playHeight/2,'playBG')
@@ -47,6 +52,13 @@ class TowerUnlocked extends Phaser.Scene
        // {
            // this.testImage3 = new FindableObject(this,850,250,'testImg','introScene',0)
        // }
+
+         //USE THIS TO KILL BGM AND OTHER AUDIO
+             this.events.once('shutdown', () => {
+            
+            this.bgm.stop();
+            
+        });
     }
 
     update(time,delta){
