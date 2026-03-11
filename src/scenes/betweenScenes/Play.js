@@ -27,7 +27,7 @@ class Play extends Phaser.Scene
         this.towerLocked = new ClickableObject(this,459,135,'tower','The tower is locked.\n I wonder how to get in?')
         
 
-        this.maleBox = new FindableObject(this,689,250,'mailBox','maleBoxCloseUpScene',0).setScale(.5).play('mailBoxAnim').setOrigin(0.5,0.5)
+        this.maleBox = new FindableObject(this,689,250,'mailBox','maleBoxCloseUpScene',9).setScale(.5).play('mailBoxAnim').setOrigin(0.5,0.5)
         //this.towerCloud =
         //this.testImage2 = new DoorWay(this,100,250,'michaelComputer','michaelRoomScene')
         //this.toTowerDoor = new DoorWay(this,400,250,'testImg','towerDoorScene' )

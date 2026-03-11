@@ -12,6 +12,7 @@ class TowerUnlocked extends Phaser.Scene
         this.sceneBG = this.add.image(width/2,playHeight/2,'playBG')
         this.cloud1 = this.add.image(0,0,'cloud').setOrigin(0,0).setAlpha(.4)
         this.towerCloud = this.add.image(391,0,'towerCloud').setOrigin(0,0)
+        
        // this.chainRight = this.add.tileSprite(500,200,'chain')
        
        
@@ -20,10 +21,12 @@ class TowerUnlocked extends Phaser.Scene
         this.chainRight1 = this.add.tileSprite(785,-50 ,0,0,'chain').setAngle(-315)
         this.longTowerRight1 = this.add.image(700,258,'longTower').setOrigin(0.5,1).setScale(0.5)
         this.chainRight2 = this.add.tileSprite(885,75 ,0,0,'chain').setAngle(-290)
-        this.towerLocked = new DoorWay(this,459,135,'tower','michaelRoomScene')
+        this.towerUnlocked = new DoorWay(this,459,135,'tower','michaelRoomScene')
         
-
-        this.maleBox = new FindableObject(this,689,250,'mailBox','maleBoxCloseUpScene',0).setScale(.5).play('mailBoxAnim').setOrigin(0.5,0.5)
+        this.letterBack = this.add.image(628 ,-7,'lettersBack').setOrigin(0,0)
+        this.maleBox = new ClickableObject(this,712 + 71 ,210+59,'maleboxOpen','I hope Malebox is okay...').setOrigin(0.5,0.5)
+        this.letterFront = this.add.image(528 ,-47,'lettersFront').setOrigin(0,0)
+        this.sawGround = new ClickableObject(this,126 + 128 ,120 + 128,'sawGround','Where did this gear come\n from? \n Or is it a saw?').setOrigin(0.5,0.5)
         //this.towerCloud =
         //this.testImage2 = new DoorWay(this,100,250,'michaelComputer','michaelRoomScene')
         //this.toTowerDoor = new DoorWay(this,400,250,'testImg','towerDoorScene' )
