@@ -26,6 +26,7 @@ class UI extends Phaser.Scene
         this.michaelImportant1 = this.add.image(620,playHeight+ 40,'michaelShield').setOrigin(0.5,0.5).setAlpha(0)
         this.michaelImportant2 = this.add.image(760,playHeight+ 40,'michaelArm').setOrigin(0.5,0.5).setAlpha(0).setScale(.25).setRotation(-225)
         this.michaelImportant3 = this.add.image(890,playHeight+ 50,'michaelCreationFile').setOrigin(0.5,0.5).setAlpha(0)
+        this.robertImportant1 = this.add.sprite(620,playHeight+ 120,'bottleSheet').play('bottleAnim').setOrigin(0.5,0.5).setAlpha(0).setScale(.20).setAngle(50)
 
     //     //backarrow stuff NOT SURE WE WANT IT ANYMORE
     //     this.backArrow = this.add.image(50,50,'backArrow').setOrigin(0.5,0.5)
@@ -117,7 +118,7 @@ class UI extends Phaser.Scene
     this.itemsFound[2] = true
         break;
     case 3:
-
+    this.robertImportant1.setAlpha(1)
     this.itemsFound[3] = true
         break;
     case 4:

@@ -1,4 +1,4 @@
-class DoorWay extends Phaser.GameObjects.Image
+class DoorWay extends Phaser.GameObjects.Sprite
 {
     constructor(scene,x,y,key,tranScene,openSprite)
     {

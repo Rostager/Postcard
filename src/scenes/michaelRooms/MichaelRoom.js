@@ -12,7 +12,7 @@ class MichaelRoom extends Phaser.Scene {
         //PLAY BGM
         this.bgm = this.sound.add('grassBGM', {
             loop: true,
-            volume: 0.5
+            volume: 0.10
         });
         this.bgm.play();
        
@@ -33,7 +33,7 @@ class MichaelRoom extends Phaser.Scene {
 
         if(this.scene.manager.getScene('uiScene').itemsFound[0] && this.scene.manager.getScene('uiScene').itemsFound[1] && this.scene.manager.getScene('uiScene').itemsFound[2])
         {
-            this.michaelShelf = new DoorWay(this,388,84,'michaelShelf','playScene','michaelShelfOpen')
+            this.michaelShelf = new DoorWay(this,388,84,'michaelShelf','towerUnlockedScene','michaelShelfOpen')
             this.topShelf = this.add.image(380,0,'michaelShelf').setOrigin(0).setAlpha(0)
             this.michaelShelf.on('pointerover', () => {
             this.topShelf.setAlpha(1)
