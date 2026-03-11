@@ -12,7 +12,7 @@ class MichaelRoom extends Phaser.Scene {
         //PLAY BGM
         this.bgm = this.sound.add('grassBGM', {
             loop: true,
-            volume: 0.5
+            volume: 0.10
         });
         this.bgm.play();
        

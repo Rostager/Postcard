@@ -11,7 +11,11 @@ let config = {
     mode: Phaser.Scale.FIT,          // fit inside available space
     autoCenter: Phaser.Scale.CENTER_BOTH
     },
-    scene: [Load,Intro,Play,MaleBoxCloseUp,TowerDoor,StairWell,MichaelRoom,RobertRoom,ShieldCloseUp,ComputerCloseUp,FurnaceCloseUp,UI]
+    scene: [Load,Intro,
+            Play,MaleBoxCloseUp,TowerUnlocked,TowerDoor,StairWell,
+            MichaelRoom,,ShieldCloseUp,ComputerCloseUp,FurnaceCloseUp,
+            RobertRoom,
+            UI  ]
 }
 let game = new Phaser.Game(config); 
 const {width,height} = game.config
