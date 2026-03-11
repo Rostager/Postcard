@@ -1,4 +1,4 @@
-class ClickableObject extends Phaser.GameObjects.Image
+class ClickableObject extends Phaser.GameObjects.Sprite
 {
     constructor(scene,x,y,key,description,sfx)
     {
@@ -15,13 +15,13 @@ class ClickableObject extends Phaser.GameObjects.Image
       this.hovering
          // hover feedback
         this.on('pointerover', () => {
-            this.setScale(1.10)
+            this.setScale(this.scale + 0.1)
              this.scene.scene.get('uiScene').cursorImage.setTexture('pointerHover')
              this.hovering = true
             //perhaps play a sound
         });
         this.on('pointerout',  () => {
-            this.setScale(1)
+            this.setScale(this.scale - 0.1)
             this.scene.scene.get('uiScene').cursorImage.setTexture('pointerDefault')
              this.hovering = true
         });
