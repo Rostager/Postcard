@@ -1,6 +1,6 @@
 class DoorWay extends Phaser.GameObjects.Sprite
 {
-    constructor(scene,x,y,key,tranScene)
+    constructor(scene,x,y,key,tranScene,openSprite)
     {
         super(scene,x,y,key)
         this.setOrigin(0)
@@ -9,16 +9,21 @@ class DoorWay extends Phaser.GameObjects.Sprite
             pixelPerfect: true,
             alphaTolerance: 1  
         })
+        if(openSprite == null)
+        {
+            openSprite = key
+        }
       
          // hover feedback
         this.on('pointerover', () => {
             this.setScale(1.10)
             this.scene.scene.get('uiScene').cursorImage.setTexture('pointerHover')
-            //perhaps play a sound
+            this.setTexture(openSprite)
         });
         this.on('pointerout',  () => {
             this.setScale(1)
             this.scene.scene.get('uiScene').cursorImage.setTexture('pointerDefault')
+            this.setTexture(key)
         });
 
         // click behavior, get the text from the ui scene and set it to description string.
