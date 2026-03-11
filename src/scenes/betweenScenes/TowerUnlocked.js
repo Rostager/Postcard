@@ -7,7 +7,7 @@ class TowerUnlocked extends Phaser.Scene
 
     create()
     {
-        this.bgm = this.sound.add('grassBGM', {
+        this.bgm = this.sound.add('grassBGMKicks', {
             loop: true,
             volume: 0.10
         });
