@@ -13,8 +13,13 @@ class ComputerCloseUp extends Phaser.Scene
          if (!this.scene.manager.getScene('uiScene').itemsFound[2]) {
          this.creationFile = new FindableObject(this,100,200,'michaelCreationFile','fileCloseUpScene',2)
          }
+
+         this.imgFile.on('pointerdown',()=>{
+            console.log("ADDING IMAGES")
+            this.add.image(width/2,playHeight/2,'computerImages')
+            this.imgFile.disableInteractive()
+         })
             
-    
 
     }
 }
