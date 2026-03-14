@@ -10,7 +10,7 @@ class MichaelRoom extends Phaser.Scene {
         this.michaelPillow = new ClickableObject(this, 246, 216, 'michaelPillow', "A pile of blue pillows...\n Something feels innoccent \n in the color.")
         
         //PLAY BGM
-        this.bgm = this.sound.add('grassBGM', {
+        this.bgm = this.sound.add('michaelRoomBGM', {
             loop: true,
             volume: 0.10
         });

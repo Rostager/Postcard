@@ -64,6 +64,8 @@ class Load extends Phaser.Scene
         this.load.audio('metal','./assets/sounds/metalDink.wav')
         this.load.audio('grassBGM','./assets/sounds/GrassFieldBGM.wav')
         this.load.audio('grassBGMKicks','./assets/sounds/GrassFieldBGMKicks.wav')
+        this.load.audio('michaelRoomBGM','./assets/sounds/michaelRoomBGM.wav')
+        this.load.audio('IntroBGM','./assets/sounds/introPostCardVoice.wav')
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }
