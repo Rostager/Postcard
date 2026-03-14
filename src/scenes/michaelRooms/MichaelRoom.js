@@ -10,7 +10,7 @@ class MichaelRoom extends Phaser.Scene {
         this.michaelPillow = new ClickableObject(this, 246, 216, 'michaelPillow', "A pile of blue pillows...\n Something feels innoccent \n in the color.")
         
         //PLAY BGM
-        this.bgm = this.sound.add('grassBGM', {
+        this.bgm = this.sound.add('michaelRoomBGM', {
             loop: true,
             volume: 0.10
         });
@@ -19,17 +19,16 @@ class MichaelRoom extends Phaser.Scene {
 
         //Important Items
         if (!this.scene.manager.getScene('uiScene').itemsFound[0]) {
-            this.michaelShield = new FindableObject(this, 718, 96, 'michaelShield', 'shieldCloseUpScene', 0)
+            this.michaelShield = new DoorWay(this, 718, 96, 'michaelShield', 'shieldCloseUpScene')
         }
          if (!this.scene.manager.getScene('uiScene').itemsFound[1]) {
-            this.michaelFurnace = new FindableObject(this, -16, -44, 'michaelFurnace','furnaceCloseUpScene',1)
+            this.michaelFurnace = new DoorWay(this, -16, -44, 'michaelFurnace','furnaceCloseUpScene')
         }
         else{
              this.michaelFurnace = new ClickableObject(this, -16, -44, 'michaelFurnace','the furnace doesnt burn as \n hot anymore.')
         }
-         if (!this.scene.manager.getScene('uiScene').itemsFound[2]) {
+         
            this.michaelComputer = new DoorWay(this, 776, 147, 'michaelComputer', 'computerCloseUpScene')
-        }
 
         if(this.scene.manager.getScene('uiScene').itemsFound[0] && this.scene.manager.getScene('uiScene').itemsFound[1] && this.scene.manager.getScene('uiScene').itemsFound[2])
         {

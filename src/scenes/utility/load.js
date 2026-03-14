@@ -31,6 +31,10 @@ class Load extends Phaser.Scene
         this.load.image('michaelCreationFile','./assets/images/MichaelRoom/CreationFile.png')
         this.load.image('michaelImgFile','./assets/images/MichaelRoom/computerFile.png')
         this.load.image('michaelArm','./assets/images/MichaelRoom/michaelArmWhite.png')
+        this.load.image('michaelFurnaceArm','./assets/images/MichaelRoom/furnaceArm.png')
+        this.load.image('michaelShieldClose','./assets/images/MichaelRoom/sheildCloseUp.png')
+        this.load.image('creationFileCloseUp','./assets/images/MichaelRoom/creationCloseUp.png')
+        this.load.image('creationFileBig','./assets/images/MichaelRoom/creationFileClose.png')
         //Play Room
         this.load.image('playBG','./assets/images/PlayRoom/PlayBG.png')
         this.load.image('tower','./assets/images/PlayRoom/Tower.png')
@@ -60,6 +64,8 @@ class Load extends Phaser.Scene
         this.load.audio('metal','./assets/sounds/metalDink.wav')
         this.load.audio('grassBGM','./assets/sounds/GrassFieldBGM.wav')
         this.load.audio('grassBGMKicks','./assets/sounds/GrassFieldBGMKicks.wav')
+        this.load.audio('michaelRoomBGM','./assets/sounds/michaelRoomBGM.wav')
+        this.load.audio('IntroBGM','./assets/sounds/introPostCardVoice.wav')
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }

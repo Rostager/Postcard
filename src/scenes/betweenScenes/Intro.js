@@ -6,6 +6,20 @@ class Intro extends Phaser.Scene
 
     create()
     {
+        //PLAY BGM
+        this.bgm = this.sound.add('IntroBGM', {
+            loop: true,
+            volume: 0.30
+        });
+        this.bgm.play();
+
+        //USE THIS TO KILL BGM AND OTHER AUDIO
+             this.events.once('shutdown', () => {
+            
+            this.bgm.stop();
+            
+        });
+        //background and envelope
         this.backgroundImage = this.add.image(width/2,height/2,'introBG').setOrigin(0.5,0.5)
         this.envelope = this.add.image(width/2,height/2,'introEnvelope').setOrigin(0.5,0.5).setInteractive({
             pixelPerfect: true,
@@ -13,7 +27,11 @@ class Intro extends Phaser.Scene
         })
         this.postcard = this.add.image(width/2,height/2,'postcardFront').setAlpha(0)
         //I lowkey need to explain the envelope, the way its setup 
-        
+        this.envelope.on('pointerover',()=>{
+            this.envelope.setTint('0xfffdff')
+        })
+
+
         this.envelope.on('pointerdown',()=>{
             this.envelope.disableInteractive()
             this.postcard.setInteractive({
