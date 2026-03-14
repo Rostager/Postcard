@@ -11,7 +11,7 @@ class ComputerCloseUp extends Phaser.Scene
          this.imgFile = new ClickableObject(this,100,100,'michaelImgFile','A bunch of cool photos')
 
          if (!this.scene.manager.getScene('uiScene').itemsFound[2]) {
-         this.creationFile = new FindableObject(this,100,200,'michaelCreationFile','michaelRoomScene',2)
+         this.creationFile = new FindableObject(this,100,200,'michaelCreationFile','fileCloseUpScene',2)
          }
             
     

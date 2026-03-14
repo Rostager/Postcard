@@ -32,6 +32,9 @@ class Load extends Phaser.Scene
         this.load.image('michaelImgFile','./assets/images/MichaelRoom/computerFile.png')
         this.load.image('michaelArm','./assets/images/MichaelRoom/michaelArmWhite.png')
         this.load.image('michaelFurnaceArm','./assets/images/MichaelRoom/furnaceArm.png')
+        this.load.image('michaelShieldClose','./assets/images/MichaelRoom/sheildCloseUp.png')
+        this.load.image('creationFileCloseUp','./assets/images/MichaelRoom/creationCloseUp.png')
+        this.load.image('creationFileBig','./assets/images/MichaelRoom/creationFileClose.png')
         //Play Room
         this.load.image('playBG','./assets/images/PlayRoom/PlayBG.png')
         this.load.image('tower','./assets/images/PlayRoom/Tower.png')

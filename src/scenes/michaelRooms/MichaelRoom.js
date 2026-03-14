@@ -19,7 +19,7 @@ class MichaelRoom extends Phaser.Scene {
 
         //Important Items
         if (!this.scene.manager.getScene('uiScene').itemsFound[0]) {
-            this.michaelShield = new FindableObject(this, 718, 96, 'michaelShield', 'shieldCloseUpScene', 0)
+            this.michaelShield = new DoorWay(this, 718, 96, 'michaelShield', 'shieldCloseUpScene')
         }
          if (!this.scene.manager.getScene('uiScene').itemsFound[1]) {
             this.michaelFurnace = new DoorWay(this, -16, -44, 'michaelFurnace','furnaceCloseUpScene')
