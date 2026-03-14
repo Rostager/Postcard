@@ -46,7 +46,9 @@ class Load extends Phaser.Scene
         this.load.image('lettersBack','./assets/images/PlayRoom/LetterBack.png')
         this.load.image('sawGround','./assets/images/PlayRoom/SawInGround.png')
         this.load.image('playBG2','./assets/images/PlayRoom/GroundForeground.png')
-        
+        //TowerEntrance
+        this.load.image('towerEntranceBG','./assets/images/TowerEntrance/TowerFrontDoor.png')
+        this.load.image('towerMirror','./assets/images/TowerEntrance/Mirror.png')
 
         //load spritesheets---------------
         this.load.spritesheet('mailBox','./assets/images/RobertRoom/MaleBoxAnimatedV2.png',{frameWidth: 180, frameHeight: 250})
