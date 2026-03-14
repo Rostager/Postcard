@@ -28,7 +28,10 @@ class Intro extends Phaser.Scene
         this.postcard = this.add.image(width/2,height/2,'postcardFront').setAlpha(0)
         //I lowkey need to explain the envelope, the way its setup 
         this.envelope.on('pointerover',()=>{
-            this.envelope.setTint('0xfffdff')
+            this.envelope.setTint(0xe7e7e7)
+        })
+        this.envelope.on('pointerout',()=>{
+            this.envelope.clearTint()
         })
 
 
