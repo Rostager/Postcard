@@ -41,6 +41,12 @@ class Load extends Phaser.Scene
         this.load.image('tekkenPoster','./assets/images/MichaelRoom/tekkenPoster.png')
         this.load.image('yoshiSit','./assets/images/MichaelRoom/Yoshi.png')
         this.load.image('izzy','./assets/images/MichaelRoom/izzy.png')
+        //FinalLetterRoom
+        this.load.image('tableFinal','./assets/images/FinalLetterRoom/tableFinal.png')
+        this.load.image('envelopeFinal','./assets/images/FinalLetterRoom/envelopeFinal.png')
+        this.load.image('letterRoomBG','./assets/images/FinalLetterRoom/FinalLetterRoomBackGround.png')
+        this.load.image('finalLetterBG','./assets/images/FinalLetterRoom/finalLetterBG.png')
+
         //Play Room
         this.load.image('playBG','./assets/images/PlayRoom/PlayBG.png')
         this.load.image('tower','./assets/images/PlayRoom/Tower.png')

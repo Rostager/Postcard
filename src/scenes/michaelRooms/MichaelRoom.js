@@ -37,7 +37,7 @@ class MichaelRoom extends Phaser.Scene {
 
         if(this.scene.manager.getScene('uiScene').itemsFound[0] && this.scene.manager.getScene('uiScene').itemsFound[1] && this.scene.manager.getScene('uiScene').itemsFound[2])
         {
-            this.michaelShelf = new DoorWay(this,388,84,'michaelShelf','towerUnlockedScene','michaelShelfOpen')
+            this.michaelShelf = new DoorWay(this,388,84,'michaelShelf','finalLetterRoomScene','michaelShelfOpen')
             this.topShelf = this.add.image(380,0,'michaelShelf').setOrigin(0).setAlpha(0)
             this.michaelShelf.on('pointerover', () => {
             this.topShelf.setAlpha(1)
