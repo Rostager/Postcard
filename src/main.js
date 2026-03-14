@@ -13,6 +13,7 @@ let config = {
     },
     scene: [Load,Intro,
             Play,MaleBoxCloseUp,TowerUnlocked,TowerDoor,StairWell,
+            TowerEntrance,MirrorShardCloseUp,
             MichaelRoom, ShieldCloseUp, ComputerCloseUp, FurnaceCloseUp, FileCloseUp,
             RobertRoom,
             UI  ]
