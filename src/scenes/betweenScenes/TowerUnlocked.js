@@ -17,22 +17,23 @@ class TowerUnlocked extends Phaser.Scene
         this.sceneBG = this.add.image(width/2,playHeight/2,'playBG')
         this.cloud1 = this.add.image(0,0,'cloud').setOrigin(0,0).setAlpha(.4)
         this.towerCloud = this.add.image(391,0,'towerCloud').setOrigin(0,0)
-        
+        this.longTowerRight1 = this.add.image(600,258,'longTower').setOrigin(0.5,1).setScale(0.5)
+        this.longTowerLeft1 = this.add.image(50,258,'longTower').setOrigin(0.5,1).setScale(0.5)
+        this.ground2 = this.add.image(0,240,'playBG2').setOrigin(0,0)
+        this.sawGround = new ClickableObject(this,126 + 128 ,120 + 128,'sawGround','Where did this gear come\n from? \n Or is it a saw?').setOrigin(0.5,0.5)
        // this.chainRight = this.add.tileSprite(500,200,'chain')
        
        
         this.chainLeft1 = this.add.tileSprite(200,-50 ,0,0,'chain').setAngle(315)
         this.chainLeft2 = this.add.tileSprite(100,75 ,0,0,'chain').setAngle(290)
         this.chainRight1 = this.add.tileSprite(785,-50 ,0,0,'chain').setAngle(-315)
-        this.longTowerRight1 = this.add.image(700,258,'longTower').setOrigin(0.5,1).setScale(0.5)
         this.chainRight2 = this.add.tileSprite(885,75 ,0,0,'chain').setAngle(-290)
         this.towerUnlocked = new DoorWay(this,459,135,'tower','michaelRoomScene')
         
         this.letterBack = this.add.image(628 ,-7,'lettersBack').setOrigin(0,0)
         this.maleBox = new ClickableObject(this,712 + 71 ,210+59,'maleboxOpen','I hope Malebox is okay...').setOrigin(0.5,0.5)
         this.letterFront = this.add.image(528 ,-47,'lettersFront').setOrigin(0,0)
-        this.sawGround = new ClickableObject(this,126 + 128 ,120 + 128,'sawGround','Where did this gear come\n from? \n Or is it a saw?').setOrigin(0.5,0.5)
-        //this.towerCloud =
+        
         //this.testImage2 = new DoorWay(this,100,250,'michaelComputer','michaelRoomScene')
         //this.toTowerDoor = new DoorWay(this,400,250,'testImg','towerDoorScene' )
         //this.toRobertRoomDoor = new DoorWay(this,700,250,'testImg','robert-room' )
@@ -47,6 +48,17 @@ class TowerUnlocked extends Phaser.Scene
             repeat: -1
         })
 
+        //castles come crashing down in a shaking manner on scene start tween borrowed from my Endless America Game over Scene
+        this.tweens.add({
+            targets: [this.longTowerLeft1, this.longTowerRight1],
+            y: 1000,
+            duration: 6000,
+            ease: 'Power1',
+            onUpdate: () => {
+                this.longTowerLeft1.setX(this.longTowerLeft1.x + Phaser.Math.Between(-2, 2))
+                this.longTowerRight1.setX(this.longTowerRight1.x + Phaser.Math.Between(-2, 2))
+            }
+        })
         //EXAMPLE OF HOW TO SET UP AN IMPORTANT ITEM TO NOT SPAWN NEXT TIME YOU VISIT THE SCENE.
         //if(!this.scene.manager.getScene('uiScene').itemsFound[0])
        // {

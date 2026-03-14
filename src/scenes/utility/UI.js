@@ -63,6 +63,8 @@ class UI extends Phaser.Scene
 
         this.input.on('pointerdown',()=>{
             this.cursorImage.setTexture('pointerHold')
+            console.log("X:" + this.input.activePointer.x) 
+            console.log("Y:" + this.input.activePointer.y)
         })
         this.input.on('pointerup',()=>{
             this.cursorImage.setTexture('pointerDefault')

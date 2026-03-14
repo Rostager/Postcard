@@ -45,6 +45,7 @@ class Load extends Phaser.Scene
         this.load.image('lettersFront','./assets/images/PlayRoom/LetterFront.png')
         this.load.image('lettersBack','./assets/images/PlayRoom/LetterBack.png')
         this.load.image('sawGround','./assets/images/PlayRoom/SawInGround.png')
+        this.load.image('playBG2','./assets/images/PlayRoom/GroundForeground.png')
         
 
         //load spritesheets---------------
