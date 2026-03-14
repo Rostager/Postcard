@@ -22,14 +22,13 @@ class MichaelRoom extends Phaser.Scene {
             this.michaelShield = new FindableObject(this, 718, 96, 'michaelShield', 'shieldCloseUpScene', 0)
         }
          if (!this.scene.manager.getScene('uiScene').itemsFound[1]) {
-            this.michaelFurnace = new FindableObject(this, -16, -44, 'michaelFurnace','furnaceCloseUpScene',1)
+            this.michaelFurnace = new DoorWay(this, -16, -44, 'michaelFurnace','furnaceCloseUpScene')
         }
         else{
              this.michaelFurnace = new ClickableObject(this, -16, -44, 'michaelFurnace','the furnace doesnt burn as \n hot anymore.')
         }
-         if (!this.scene.manager.getScene('uiScene').itemsFound[2]) {
+         
            this.michaelComputer = new DoorWay(this, 776, 147, 'michaelComputer', 'computerCloseUpScene')
-        }
 
         if(this.scene.manager.getScene('uiScene').itemsFound[0] && this.scene.manager.getScene('uiScene').itemsFound[1] && this.scene.manager.getScene('uiScene').itemsFound[2])
         {
