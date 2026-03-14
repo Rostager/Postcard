@@ -19,6 +19,8 @@ class Load extends Phaser.Scene
        this.load.image('pointerHover','./assets/images/Hover.png')
        this.load.image('pointerHold','./assets/images/Hold.png')
        this.load.image('devBG','./assets/images/RobertRoom/DevScene.png')
+       this.load.image('portal', './assets/images/PortalBackdrop.png')
+       this.load.image('letterHand', './assets/images/LetterHand.png')
        //Michaels room
         this.load.image('michaelRoomBG','./assets/images/MichaelRoom/MichaelsRoomBG.png')
         this.load.image('michaelComputer','./assets/images/MichaelRoom/computer.png')
@@ -48,12 +50,16 @@ class Load extends Phaser.Scene
         this.load.image('playBG2','./assets/images/PlayRoom/GroundForeground.png')
         //TowerEntrance
         this.load.image('towerEntranceBG','./assets/images/TowerEntrance/TowerFrontDoor.png')
+        this.load.image('mirrorShard','./assets/images/TowerEntrance/MirrorShard.png')
+        this.load.image('towerDoorClosed','./assets/images/TowerEntrance/DoorClosed.png')
+        this.load.image('towerDoorOpen','./assets/images/TowerEntrance/DoorOpen.png')
         // this.load.image('towerMirror','./assets/images/TowerEntrance/Mirror.png')
         this.load.spritesheet('towerMirror','./assets/images/TowerEntrance/MirrorSheet.png',{frameWidth: 204, frameHeight: 300})
 
         //load spritesheets---------------
         this.load.spritesheet('mailBox','./assets/images/RobertRoom/MaleBoxAnimatedV2.png',{frameWidth: 180, frameHeight: 250})
         this.load.spritesheet('bottleSheet','./assets/images/PlayRoom/BottleSheet.png',{frameWidth: 427, frameHeight: 425})
+        this.load.spritesheet('eyeBlink','./assets/images/TowerEntrance/EyeBlinkSheet.png',{frameWidth: 207, frameHeight: 122})
         //load audio------------------
         this.load.audio('fireSound','./assets/sounds/fire.wav')
         //load fonts------------------
@@ -81,6 +87,14 @@ class Load extends Phaser.Scene
                 key: 'bottleAnim',
                 frames: this.anims.generateFrameNumbers('bottleSheet',{start: 0, end: 3}),
                 frameRate: 15,
+                repeat: -1
+            })
+
+            //Eye Blinking animatation
+            this.anims.create({
+                key: 'eyeBlinkAnim',
+                frames: this.anims.generateFrameNumbers('eyeBlink',{start: 0, end: 1}),
+                frameRate: 2,
                 repeat: -1
             })
             
