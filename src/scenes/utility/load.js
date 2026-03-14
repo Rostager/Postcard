@@ -60,6 +60,7 @@ class Load extends Phaser.Scene
         this.load.spritesheet('mailBox','./assets/images/RobertRoom/MaleBoxAnimatedV2.png',{frameWidth: 180, frameHeight: 250})
         this.load.spritesheet('bottleSheet','./assets/images/PlayRoom/BottleSheet.png',{frameWidth: 427, frameHeight: 425})
         this.load.spritesheet('eyeBlink','./assets/images/TowerEntrance/EyeBlinkSheet.png',{frameWidth: 207, frameHeight: 122})
+        this.load.spritesheet('mouthSheet','./assets/images/TowerEntrance/MouthSheet.png',{frameWidth: 207, frameHeight: 135})
         //load audio------------------
         this.load.audio('fireSound','./assets/sounds/fire.wav')
         //load fonts------------------
@@ -90,7 +91,7 @@ class Load extends Phaser.Scene
                 repeat: -1
             })
 
-            //Eye Blinking animatation
+            //Eye Blinking animation
             this.anims.create({
                 key: 'eyeBlinkAnim',
                 frames: this.anims.generateFrameNumbers('eyeBlink',{start: 0, end: 1}),
@@ -98,6 +99,13 @@ class Load extends Phaser.Scene
                 repeat: -1
             })
             
+            //Mouth animation
+            this.anims.create({
+                key: 'mouthAnim',
+                frames: this.anims.generateFrameNumbers('mouthSheet',{start: 0, end: 5}),
+                frameRate: 4,
+                repeat: -1
+            })
         this.scene.start('introScene')
     }
 }
