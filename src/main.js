@@ -14,6 +14,7 @@ let config = {
     scene: [Load,Intro,
             Play,MaleBoxCloseUp,TowerUnlocked,TowerDoor,StairWell,
             MichaelRoom, ShieldCloseUp, ComputerCloseUp, FurnaceCloseUp, FileCloseUp,
+            FinalLetterRoom, TheFinalLetter, 
             RobertRoom,
             UI  ]
 }
