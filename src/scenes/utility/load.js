@@ -68,6 +68,16 @@ class Load extends Phaser.Scene
         this.load.image('towerDoorClosed','./assets/images/TowerEntrance/DoorClosed.png')
         this.load.image('towerDoorOpen','./assets/images/TowerEntrance/DoorOpen.png')
         this.load.image('brokenMirror','./assets/images/TowerEntrance/MirrorBroken.png')
+        //Elevator Room
+        this.load.image('canvasClean', './assets/images/ElevatorRoom/CanvasClean.png')
+        this.load.image('canvasPainted', './assets/images/ElevatorRoom/CanvasPainted.png')
+        this.load.image('robertArm', './assets/images/ElevatorRoom/RobertArm.png')
+        this.load.image('gear1', './assets/images/ElevatorRoom/Gear1.png')
+        this.load.image('gear2', './assets/images/ElevatorRoom/Gear2.png')
+        this.load.image('gear3', './assets/images/ElevatorRoom/Gear3.png')
+        this.load.image('gear4', './assets/images/ElevatorRoom/Gear4.png')
+        this.load.image('elevatorClosed','./assets/images/ElevatorRoom/ElevatorClosed.png')
+        this.load.image('elevatorOpen','./assets/images/ElevatorRoom/ElevatorOpen.png')
         // this.load.image('towerMirror','./assets/images/TowerEntrance/Mirror.png')
         this.load.spritesheet('towerMirror','./assets/images/TowerEntrance/MirrorSheet.png',{frameWidth: 204, frameHeight: 300})
 
@@ -76,6 +86,11 @@ class Load extends Phaser.Scene
         this.load.spritesheet('bottleSheet','./assets/images/PlayRoom/BottleSheet.png',{frameWidth: 427, frameHeight: 425})
         this.load.spritesheet('eyeBlink','./assets/images/TowerEntrance/EyeBlinkSheet.png',{frameWidth: 207, frameHeight: 122})
         this.load.spritesheet('mouthSheet','./assets/images/TowerEntrance/MouthSheet.png',{frameWidth: 207, frameHeight: 135})
+
+        this.load.spritesheet('canvas1','./assets/images/ElevatorRoom/CanvasSheet1.png',{frameWidth: 147, frameHeight: 184})
+        this.load.spritesheet('canvas2','./assets/images/ElevatorRoom/CanvasSheet2.png',{frameWidth: 147, frameHeight: 184})
+        this.load.spritesheet('canvas3','./assets/images/ElevatorRoom/CanvasSheet3.png',{frameWidth: 147, frameHeight: 184})
+        this.load.spritesheet('canvas4','./assets/images/ElevatorRoom/CanvasSheet4.png',{frameWidth: 147, frameHeight: 184})
         //load audio------------------
         this.load.audio('fireSound','./assets/sounds/fire.wav')
         //load fonts------------------

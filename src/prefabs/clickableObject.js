@@ -3,6 +3,8 @@ class ClickableObject extends Phaser.GameObjects.Sprite
     constructor(scene,x,y,key,description,sfx)
     {
         super(scene,x,y,key)
+        
+        this.textDescription = description
         this.setOrigin(0,0)
         scene.add.existing(this)
         this.setInteractive({
@@ -30,9 +32,13 @@ class ClickableObject extends Phaser.GameObjects.Sprite
         this.on('pointerdown', () => {
             
             this.scene.sound.play(sfx);
-            this.scene.scene.get('uiScene').typewriterEffect(description)
+            this.scene.scene.get('uiScene').typewriterEffect(this.textDescription)
         })
     
+    }
+
+    changeDescription(newDescription){
+       this.textDescription = newDescription
     }
 
 }
