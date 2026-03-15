@@ -78,6 +78,7 @@ class Load extends Phaser.Scene
         this.load.image('gear4', './assets/images/ElevatorRoom/Gear4.png')
         this.load.image('elevatorClosed','./assets/images/ElevatorRoom/ElevatorClosed.png')
         this.load.image('elevatorOpen','./assets/images/ElevatorRoom/ElevatorOpen.png')
+        this.load.image('robertStanding','./assets/images/ElevatorRoom/RobertStanding.png')
         // this.load.image('towerMirror','./assets/images/TowerEntrance/Mirror.png')
         this.load.spritesheet('towerMirror','./assets/images/TowerEntrance/MirrorSheet.png',{frameWidth: 204, frameHeight: 300})
 
@@ -86,6 +87,7 @@ class Load extends Phaser.Scene
         this.load.spritesheet('bottleSheet','./assets/images/PlayRoom/BottleSheet.png',{frameWidth: 427, frameHeight: 425})
         this.load.spritesheet('eyeBlink','./assets/images/TowerEntrance/EyeBlinkSheet.png',{frameWidth: 207, frameHeight: 122})
         this.load.spritesheet('mouthSheet','./assets/images/TowerEntrance/MouthSheet.png',{frameWidth: 207, frameHeight: 135})
+        this.load.spritesheet('robertTalking','./assets/images/ElevatorRoom/RobertTalkSheet.png',{frameWidth: 167, frameHeight: 198})
 
         this.load.spritesheet('canvas1','./assets/images/ElevatorRoom/CanvasSheet1.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas2','./assets/images/ElevatorRoom/CanvasSheet2.png',{frameWidth: 147, frameHeight: 184})

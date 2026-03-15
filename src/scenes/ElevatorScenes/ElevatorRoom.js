@@ -13,6 +13,7 @@ class ElevatorRoom extends Phaser.Scene {
         this.canvas2 = new ClickableObject(this,320,160,'canvasClean', 'An Empty Canvas').setOrigin(0.5,0.5)
         this.canvas3 = new ClickableObject(this,640,160,'canvasClean', 'An Empty Canvas').setOrigin(0.5,0.5)
         this.canvas4 = new ClickableObject(this,800,160,'canvasClean', 'An Empty Canvas').setOrigin(0.5,0.5)
+        this.robertStanding = new ClickableObject(this,800,212,'robertStanding', 'He Doesn\'t seem to notice you.').setOrigin(0.5,0.5)
     }
 
 } 
