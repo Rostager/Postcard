@@ -6,6 +6,8 @@ class FurnaceCloseUp extends Phaser.Scene
     }
     create()
     {
+        
+
          this.sceneBG = this.add.image(width/2,playHeight/2,'michaelFurnaceCloseUp')
          this.arm = new FindableObject(this,96,122,'michaelFurnaceArm','michaelRoomScene',1)
          this.fireSound = this.sound.add('fireSound', {
@@ -20,5 +22,9 @@ class FurnaceCloseUp extends Phaser.Scene
             this.fireSound.stop();
             }
         });
+
+   
+
+
     }
 }
