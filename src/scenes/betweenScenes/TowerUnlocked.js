@@ -28,7 +28,7 @@ class TowerUnlocked extends Phaser.Scene
         this.chainLeft2 = this.add.tileSprite(100,75 ,0,0,'chain').setAngle(290)
         this.chainRight1 = this.add.tileSprite(785,-50 ,0,0,'chain').setAngle(-315)
         this.chainRight2 = this.add.tileSprite(885,75 ,0,0,'chain').setAngle(-290)
-        this.towerUnlocked = new DoorWay(this,459,135,'tower','michaelRoomScene')
+        this.towerUnlocked = new DoorWay(this,459,135,'tower','towerEntranceScene')
         
         this.letterBack = this.add.image(628 ,-7,'lettersBack').setOrigin(0,0)
         this.maleBox = new ClickableObject(this,712 + 71 ,210+59,'maleboxOpen','I hope Malebox is okay...').setOrigin(0.5,0.5)

@@ -19,6 +19,8 @@ class Load extends Phaser.Scene
        this.load.image('pointerHover','./assets/images/Hover.png')
        this.load.image('pointerHold','./assets/images/Hold.png')
        this.load.image('devBG','./assets/images/RobertRoom/DevScene.png')
+       this.load.image('portal', './assets/images/PortalBackdrop.png')
+       this.load.image('letterHand', './assets/images/LetterHand.png')
        //Michaels room
         this.load.image('michaelRoomBG','./assets/images/MichaelRoom/MichaelsRoomBG.png')
         this.load.image('michaelComputer','./assets/images/MichaelRoom/computer.png')
@@ -31,6 +33,20 @@ class Load extends Phaser.Scene
         this.load.image('michaelCreationFile','./assets/images/MichaelRoom/CreationFile.png')
         this.load.image('michaelImgFile','./assets/images/MichaelRoom/computerFile.png')
         this.load.image('michaelArm','./assets/images/MichaelRoom/michaelArmWhite.png')
+        this.load.image('michaelFurnaceArm','./assets/images/MichaelRoom/furnaceArm.png')
+        this.load.image('michaelShieldClose','./assets/images/MichaelRoom/sheildCloseUp.png')
+        this.load.image('creationFileCloseUp','./assets/images/MichaelRoom/creationCloseUp.png')
+        this.load.image('creationFileBig','./assets/images/MichaelRoom/creationFileClose.png')
+        this.load.image('computerImages','./assets/images/MichaelRoom/computerImages.png')
+        this.load.image('tekkenPoster','./assets/images/MichaelRoom/tekkenPoster.png')
+        this.load.image('yoshiSit','./assets/images/MichaelRoom/Yoshi.png')
+        this.load.image('izzy','./assets/images/MichaelRoom/izzy.png')
+        //FinalLetterRoom
+        this.load.image('tableFinal','./assets/images/FinalLetterRoom/tableFinal.png')
+        this.load.image('envelopeFinal','./assets/images/FinalLetterRoom/envelopeFinal.png')
+        this.load.image('letterRoomBG','./assets/images/FinalLetterRoom/FinalLetterRoomBackGround.png')
+        this.load.image('finalLetterBG','./assets/images/FinalLetterRoom/finalLetterBG.png')
+
         //Play Room
         this.load.image('playBG','./assets/images/PlayRoom/PlayBG.png')
         this.load.image('tower','./assets/images/PlayRoom/Tower.png')
@@ -46,11 +62,20 @@ class Load extends Phaser.Scene
         this.load.image('lettersBack','./assets/images/PlayRoom/LetterBack.png')
         this.load.image('sawGround','./assets/images/PlayRoom/SawInGround.png')
         this.load.image('playBG2','./assets/images/PlayRoom/GroundForeground.png')
-        
+        //TowerEntrance
+        this.load.image('towerEntranceBG','./assets/images/TowerEntrance/TowerFrontDoor.png')
+        this.load.image('mirrorShard','./assets/images/TowerEntrance/MirrorShard.png')
+        this.load.image('towerDoorClosed','./assets/images/TowerEntrance/DoorClosed.png')
+        this.load.image('towerDoorOpen','./assets/images/TowerEntrance/DoorOpen.png')
+        this.load.image('brokenMirror','./assets/images/TowerEntrance/MirrorBroken.png')
+        // this.load.image('towerMirror','./assets/images/TowerEntrance/Mirror.png')
+        this.load.spritesheet('towerMirror','./assets/images/TowerEntrance/MirrorSheet.png',{frameWidth: 204, frameHeight: 300})
 
         //load spritesheets---------------
         this.load.spritesheet('mailBox','./assets/images/RobertRoom/MaleBoxAnimatedV2.png',{frameWidth: 180, frameHeight: 250})
         this.load.spritesheet('bottleSheet','./assets/images/PlayRoom/BottleSheet.png',{frameWidth: 427, frameHeight: 425})
+        this.load.spritesheet('eyeBlink','./assets/images/TowerEntrance/EyeBlinkSheet.png',{frameWidth: 207, frameHeight: 122})
+        this.load.spritesheet('mouthSheet','./assets/images/TowerEntrance/MouthSheet.png',{frameWidth: 207, frameHeight: 135})
         //load audio------------------
         this.load.audio('fireSound','./assets/sounds/fire.wav')
         //load fonts------------------
@@ -60,6 +85,9 @@ class Load extends Phaser.Scene
         this.load.audio('metal','./assets/sounds/metalDink.wav')
         this.load.audio('grassBGM','./assets/sounds/GrassFieldBGM.wav')
         this.load.audio('grassBGMKicks','./assets/sounds/GrassFieldBGMKicks.wav')
+        this.load.audio('michaelRoomBGM','./assets/sounds/michaelRoomBGM.wav')
+        this.load.audio('IntroBGM','./assets/sounds/introPostCardVoice.wav')
+        this.load.audio('closeUpBGM','./assets/sounds/closeUpMusicPostCard.wav')
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }
@@ -80,7 +108,22 @@ class Load extends Phaser.Scene
                 frameRate: 15,
                 repeat: -1
             })
+
+            //Eye Blinking animation
+            this.anims.create({
+                key: 'eyeBlinkAnim',
+                frames: this.anims.generateFrameNumbers('eyeBlink',{start: 0, end: 1}),
+                frameRate: 2,
+                repeat: -1
+            })
             
+            //Mouth animation
+            this.anims.create({
+                key: 'mouthAnim',
+                frames: this.anims.generateFrameNumbers('mouthSheet',{start: 0, end: 5}),
+                frameRate: 4,
+                repeat: -1
+            })
         this.scene.start('introScene')
     }
 }

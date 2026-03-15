@@ -13,7 +13,9 @@ let config = {
     },
     scene: [Load,Intro,
             Play,MaleBoxCloseUp,TowerUnlocked,TowerDoor,StairWell,
-            MichaelRoom,,ShieldCloseUp,ComputerCloseUp,FurnaceCloseUp,
+            TowerEntrance,MirrorShardCloseUp,TowerEntranceUnlocked,
+            MichaelRoom, ShieldCloseUp, ComputerCloseUp, FurnaceCloseUp, FileCloseUp,
+            FinalLetterRoom, TheFinalLetter, 
             RobertRoom,
             UI  ]
 }
@@ -21,3 +23,18 @@ let game = new Phaser.Game(config);
 const {width,height} = game.config
 const playHeight = height * 2/3
 const playWidth = width //might not need this
+
+
+
+
+
+
+
+
+
+/* TO DO
+Complete Empty Room, Highlight creation each canvas switches between 4 images, pic ones that mean something to us, either thumbnails or random art
+Item should be my arm holding various art supplies, you need this before you can click the canvases to switch art
+Once all canvases are a coesive picture a door way opens to the next room
+
+*/
