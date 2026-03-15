@@ -15,6 +15,7 @@ let config = {
             Play,MaleBoxCloseUp,TowerUnlocked,TowerDoor,StairWell,
             TowerEntrance,MirrorShardCloseUp,TowerEntranceUnlocked,
             MichaelRoom, ShieldCloseUp, ComputerCloseUp, FurnaceCloseUp, FileCloseUp,
+            FinalLetterRoom, TheFinalLetter, 
             RobertRoom,
             UI  ]
 }
