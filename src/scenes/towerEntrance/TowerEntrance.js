@@ -54,6 +54,7 @@ class TowerEntrance extends Phaser.Scene {
         this.mirror.x = 1500 //Send it off screen
         this.mirrorBrokenFindable.x = 132
        }
+
     }
 
 }
