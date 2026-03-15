@@ -88,6 +88,9 @@ class Load extends Phaser.Scene
         this.load.audio('michaelRoomBGM','./assets/sounds/michaelRoomBGM.wav')
         this.load.audio('IntroBGM','./assets/sounds/introPostCardVoice.wav')
         this.load.audio('closeUpBGM','./assets/sounds/closeUpMusicPostCard.wav')
+        this.load.audio('creationVoice','./assets/sounds/VoiceOvers/CreationLetter.wav')
+        this.load.audio('LeviathanVoice','./assets/sounds/VoiceOvers/leviatahnletterPostcard.wav')
+        this.load.audio('ShieldVoice','./assets/sounds/VoiceOvers/ShieldBearerVoice.wav')
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }

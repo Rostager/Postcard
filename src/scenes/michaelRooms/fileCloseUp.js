@@ -9,8 +9,13 @@ class FileCloseUp extends Phaser.Scene
         this.bgm = this.sound.add('closeUpBGM', {
             loop: true,
             volume: 0.10
-        });
-        this.bgm.play();
+        })
+        this.bgm.play()
+        this.voiceOver = this.sound.add('creationVoice', {
+            loop: false,
+            volume: 0.50
+        })
+        this.voiceOver.play()
          this.sceneBG = this.add.image(width/2,playHeight/2,'creationFileCloseUp')
          this.imgFile = new FindableObject(this,0,61,'creationFileBig','michaelRoomScene',2)
 
@@ -19,6 +24,7 @@ class FileCloseUp extends Phaser.Scene
              this.events.once('shutdown', () => {
             
             this.bgm.stop();
+            this.voiceOver.stop()
             
         });
 
@@ -30,7 +36,7 @@ class FileCloseUp extends Phaser.Scene
             color: '0xefefef'
         })
         //This is where you write the letter text.
-        this.typewriterEffect("When I found myself in darkness I created light\nWhen they found my light they snuffed it\nWhen I couldn't swim I build a boat\nSo they poked holes to make me sink\nWhen I couldn't bear the silence I created noise\nWhich they muted when they could\n\nAnd when I created a path out of this darkness with all the\nskills I aquired\nthey did nothing but smash the latter,\ntrapping themselfs in darkness")
+        this.typewriterEffect("When I found myself in darkness I created light,\nWhen they found my light they snuffed it,\nWhen I couldn't swim I build a boat,\nSo they poked holes to make me sink,\nWhen I couldn't bear the silence I created noise,\nWhich they muted when they could.\n\nAnd when I created a path out of this darkness with all the\nskills I aquired,\nThey did nothing but smash the ladder,\ntrapping themselves in darkness.")
 
     }
      typewriterEffect(fullText) {

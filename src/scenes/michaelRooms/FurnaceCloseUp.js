@@ -11,25 +11,32 @@ class FurnaceCloseUp extends Phaser.Scene
          this.arm = new FindableObject(this,96,122,'michaelFurnaceArm','michaelRoomScene',1)
          this.fireSound = this.sound.add('fireSound', {
          loop: true,
-         volume: 0.5
+         volume: 0.1
             });
 
         this.fireSound.play();
+        this.voiceOver = this.sound.add('LeviathanVoice', {
+            loop: false,
+            volume: 0.50
+        })
+        this.voiceOver.play()
 
         this.events.once('shutdown', () => {
             if (this.fireSound) {
-            this.fireSound.stop();
+            this.fireSound.stop()
+            this.voiceOver.stop()
             }
         });
 
         //FOR TYPEWRITTER EFFECT FOR LETTER
         this.typewriterEvent = null;
-        this.descriptionText = this.add.text(633,17,'',{
+        this.descriptionText = this.add.text(515,10,'',{
             fontFamily:'Georgia',
-            fontSize: '20px'
-        }).setAngle(12)
+            fontSize: '20px',
+            color:'0xffffff'
+        }).setAngle(0)
         //This is where you write the letter text.
-        this.typewriterEffect("this is a test to type writter\n")
+        this.typewriterEffect("Beneath the Leviathan Cross I stand,\nWhen cruelty grows, it’s us who feed it,\nWhen mercy is present, it’s us who grant it.\nWhen souls are shared, it’s us who bound it.\nWhen greed is fruitful, it’s us who suffer.\nWhen we are sick, it’s us who heals.\nWhen friends return, it’s us who greet.\nWhen the Leviathan judges, it’s us who stare.\n\nTo wait for salvation is to wait in vain,\nHumanity destroys, and humanity creates,\nThis is our burden, beneath the Leviathan.\nNo god made war, no god made greed.\nBeneath the Leviathan Cross I stand,\nKnowing the world was shaped by human hands.")
         
 
 
