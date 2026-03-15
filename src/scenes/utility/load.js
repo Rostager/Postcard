@@ -61,6 +61,7 @@ class Load extends Phaser.Scene
         this.load.image('mirrorShard','./assets/images/TowerEntrance/MirrorShard.png')
         this.load.image('towerDoorClosed','./assets/images/TowerEntrance/DoorClosed.png')
         this.load.image('towerDoorOpen','./assets/images/TowerEntrance/DoorOpen.png')
+        this.load.image('brokenMirror','./assets/images/TowerEntrance/MirrorBroken.png')
         // this.load.image('towerMirror','./assets/images/TowerEntrance/Mirror.png')
         this.load.spritesheet('towerMirror','./assets/images/TowerEntrance/MirrorSheet.png',{frameWidth: 204, frameHeight: 300})
 
