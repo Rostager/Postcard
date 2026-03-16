@@ -25,6 +25,10 @@ class ElevatorRoomPainted extends Phaser.Scene {
 
         this.canvas4 = new ClickableObject(this,800,160,'canvas4', 'An Empty Canvas').setOrigin(0.5,0.5).setFrame(0)
         this.gear4 = this.add.image(800,1000,'gear3').setOrigin(0.5,0.5).setScale(0.5)
+        //Logic to kill BGM on Scene Close
+         this.events.once('shutdown', () => {
+            this.sound.stopByKey('artBGM');
+        });
 
         //Logic for clicking the canvases and cycling through images until gear
         this.canvas1.on('pointerdown', () => {

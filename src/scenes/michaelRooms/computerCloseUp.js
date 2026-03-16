@@ -6,6 +6,12 @@ class ComputerCloseUp extends Phaser.Scene
 
     create()
     {
+         //PLAY BGM
+        this.bgm = this.sound.add('computerBGM', {
+            loop: true,
+            volume: 0.10
+        });
+        this.bgm.play();
          this.sceneBG = this.add.image(width/2,playHeight/2,'michaelComputerBG')
          this.backButton = new BackButton(this,playWidth - 200,  40,'michaelRoomScene')
          this.imgFile = new ClickableObject(this,100,100,'michaelImgFile','A bunch of cool photos')
@@ -19,7 +25,9 @@ class ComputerCloseUp extends Phaser.Scene
             this.add.image(width/2,playHeight/2,'computerImages')
             this.imgFile.disableInteractive()
          })
-            
+            this.backButton.on('pointerdown',()=>{
+                this.bgm.stop()
+            })
 
     }
 }
