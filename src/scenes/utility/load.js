@@ -91,8 +91,6 @@ class Load extends Phaser.Scene
         this.load.spritesheet('canvas2','./assets/images/ElevatorRoom/CanvasSheet2.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas3','./assets/images/ElevatorRoom/CanvasSheet3.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas4','./assets/images/ElevatorRoom/CanvasSheet4.png',{frameWidth: 147, frameHeight: 184})
-        //load audio------------------
-        this.load.audio('fireSound','./assets/sounds/fire.wav')
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
         //load audio------------------
@@ -108,6 +106,10 @@ class Load extends Phaser.Scene
         this.load.audio('ShieldVoice','./assets/sounds/VoiceOvers/ShieldBearerVoice.wav')
         this.load.audio('artBGM','./assets/sounds/ArtGalleryPostCard.wav')
         this.load.audio('computerBGM','./assets/sounds/ComputerBGM.wav')
+
+
+        //SOUNDS WE DIDNT MAKE
+        this.load.audio('fireSound','./assets/sounds/fire.wav')
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }
