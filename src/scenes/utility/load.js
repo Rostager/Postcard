@@ -44,6 +44,7 @@ class Load extends Phaser.Scene
         this.load.image('tekkenPoster','./assets/images/MichaelRoom/tekkenPoster.png')
         this.load.image('yoshiSit','./assets/images/MichaelRoom/Yoshi.png')
         this.load.image('izzy','./assets/images/MichaelRoom/izzy.png')
+        this.load.image('michael','./assets/images/MichaelRoom/michaelTheMan.png')
         //FinalLetterRoom
         this.load.image('tableFinal','./assets/images/FinalLetterRoom/tableFinal.png')
         this.load.image('envelopeFinal','./assets/images/FinalLetterRoom/envelopeFinal.png')
@@ -130,6 +131,8 @@ class Load extends Phaser.Scene
         this.load.audio('purringSFX','./assets/sounds/purringSFX.wav')
         this.load.audio('meowSFX','./assets/sounds/meowSFX.wav')
         this.load.audio('chainsSFX','./assets/sounds/chainsPullingSFX.wav')
+        this.load.audio('metalSlamSFX','./assets/sounds/metalSlam.wav')
+        this.load.audio('metalOpenSFX','./assets/sounds/metalOpen.wav')
 
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')

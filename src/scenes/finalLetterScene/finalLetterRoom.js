@@ -22,7 +22,7 @@ class FinalLetterRoom extends Phaser.Scene {
         this.michaelGhost = new ClickableObject(this, 860, 190,'michaelGhost', 'Remix our memories').setOrigin(0.5,0.5).setAlpha(0.25)
 
         this.ironMaiden = new ClickableObject(this, 495, 180,'ironMaiden', 'The Iron Maiden').setOrigin(0.5,0.5)
-        this.ironMaidenShut = new ClickableObject(this, 495, 1000,'ironMaidenShut', 'The Iron Maiden Shut').setOrigin(0.5,0.5)
+        this.ironMaidenShut = new ClickableObject(this, 495, 1000,'ironMaidenShut', 'The Iron Maiden Shut','metalOpenSFX').setOrigin(0.5,0.5)
         this.ironMaidenopen = this.add.image(495,1000,'ironMaidenOpen').setOrigin(0.5,0.5)
         this.finalLetter = new DoorWay(this, 490, 1000, 'envelopeFinal', "theFinalLetterScene").setOrigin(0.5,0.5)
         
@@ -34,7 +34,7 @@ class FinalLetterRoom extends Phaser.Scene {
             // If frame 3 is the final broken frame, stop there
             if (this.maidenClicks >= 2) {
                 this.maidenLocked = true
-                this.sound.play('glassBreak')
+                this.sound.play('metalSlamSFX')
                 this.ironMaidenShut.setY(180)
                 this.ironMaiden.setY(1000)
             }

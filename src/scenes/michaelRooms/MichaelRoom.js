@@ -13,6 +13,7 @@ class MichaelRoom extends Phaser.Scene {
         this.yoshi = new ClickableObject(this,327,26,'yoshiSit',"a weird looking little white\nand grey cat...",'meowSFX')
         this.izzy = new ClickableObject(this,510,253,'izzy',"a large cat...She might have\ntroubles getting up...",'purringSFX')
         
+       
         //PLAY BGM
         this.bgm = this.sound.add('michaelRoomBGM', {
             loop: true,
@@ -52,6 +53,7 @@ class MichaelRoom extends Phaser.Scene {
 
             
         }
+        else { this.michael = new ClickableObject(this, 620, 122, 'michael', "He seems to be lost in\n thought or maybe not\n thinking at all...")}
 
              //USE THIS TO KILL BGM AND OTHER AUDIO
              this.events.once('shutdown', () => {
