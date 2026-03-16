@@ -54,7 +54,13 @@ class Intro extends Phaser.Scene
         
         })
 
-        
+        this.postcard.on('pointerover',()=>{
+            this.postcard.setTint(0xe7e7e7)
+        })
+        this.postcard.on('pointerout',()=>{
+            this.postcard.clearTint()
+        })
+
         //This handles clicking the postcard, flipping it, spinning and sucking the player into it then opening a new scene.
     this.postcard.on('pointerdown', () => {
      this.postcard.disableInteractive()

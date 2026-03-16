@@ -17,6 +17,11 @@ class TowerUnlocked extends Phaser.Scene
             volume: 0.20
         });
         this.castleFallingSFX.play();
+        this.chainsPulling = this.sound.add('chainsSFX', {
+            loop: true,
+            volume: 0.1
+        });
+        this.chainsPulling.play()
         
         //Background/Unclickable Objects
         this.sceneBG = this.add.image(width/2,playHeight/2,'playBG')
@@ -74,6 +79,7 @@ class TowerUnlocked extends Phaser.Scene
              this.events.once('shutdown', () => {
             
             this.bgm.stop();
+             this.chainsPulling.stop()
             
         });
     }
