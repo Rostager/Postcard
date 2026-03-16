@@ -4,6 +4,8 @@ class MichaelRoom extends Phaser.Scene {
     }
 
     create() {
+        this.UiScene = this.scene.manager.getScene('uiScene')
+        this.UiScene.dot.y = 411
         //Background 
         this.sceneBG = this.add.image(width / 2, playHeight / 2, 'michaelRoomBG')
         //Object examples of making a clickable object and FindableObject
