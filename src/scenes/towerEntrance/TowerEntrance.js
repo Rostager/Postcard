@@ -6,6 +6,15 @@ class TowerEntrance extends Phaser.Scene {
     create(){
         this.UiScene = this.scene.manager.getScene('uiScene')
         this.UiScene.dot.y = 483    
+         //PLAY BGM
+        this.bgm = this.sound.add('closeUpBGM', {
+            loop: true,
+            volume: 0.10
+        });
+        this.bgm.play();
+       
+
+
 
         this.mirrorClicks = 0
         this.mirrorBroken = false
@@ -14,7 +23,7 @@ class TowerEntrance extends Phaser.Scene {
         this.towerEntranceBG = this.add.image(0,0,'towerEntranceBG').setOrigin(0,0)
 
         //this.towerMirror = this.add.image(30,4,'towerMirror').setOrigin(0,0)
-        this.mirror = new ClickableObject (this, 132, 150, 'towerMirror', "Its so fragile...").setOrigin(0.5,0.5)
+        this.mirror = new ClickableObject (this, 132, 150, 'towerMirror', "Its so fragile...",'glassTap').setOrigin(0.5,0.5)
         this.mirrorBrokenFindable = new FindableObject(this,3000,4 + 150,'towerMirror','mirrorShardCloseUpScene', -1).setOrigin(0.5,0.5).setFrame(3) //Not doorway because its resetting sprite to default
 
         this.eye = new ClickableObject ( this, 805, 69, 'eyeBlink', "Its watching you...").setOrigin(0.5,0.5).play('eyeBlinkAnim')
@@ -31,6 +40,7 @@ class TowerEntrance extends Phaser.Scene {
             // If frame 3 is the final broken frame, stop there
             if (this.mirrorClicks >= 3) {
                 this.mirrorBroken = true
+                this.sound.play('glassBreak')
             }
         })
 
@@ -43,6 +53,7 @@ class TowerEntrance extends Phaser.Scene {
             this.eye.anims.play('eyeBlinkAnim')
 
         })
+
     }
 
     update(){

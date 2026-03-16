@@ -12,6 +12,11 @@ class TowerUnlocked extends Phaser.Scene
             volume: 0.10
         });
         this.bgm.play();
+        this.castleFallingSFX = this.sound.add('castleFallingSFX', {
+            loop: false,
+            volume: 0.20
+        });
+        this.castleFallingSFX.play();
         
         //Background/Unclickable Objects
         this.sceneBG = this.add.image(width/2,playHeight/2,'playBG')

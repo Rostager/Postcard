@@ -12,6 +12,14 @@ class Intro extends Phaser.Scene
             volume: 0.30
         });
         this.bgm.play();
+        this.portalSFX = this.sound.add('portalSFX',{
+            volume: 0.50,
+            loop: false
+        })
+        this.paperSound = this.sound.add('paperSFX',{
+            volume: 0.50,
+            loop: false
+        })
 
         //USE THIS TO KILL BGM AND OTHER AUDIO
              this.events.once('shutdown', () => {
@@ -36,6 +44,7 @@ class Intro extends Phaser.Scene
 
 
         this.envelope.on('pointerdown',()=>{
+            this.paperSound.play()
             this.envelope.disableInteractive()
             this.postcard.setInteractive({
                  pixelPerfect: true,
@@ -48,9 +57,9 @@ class Intro extends Phaser.Scene
         
         //This handles clicking the postcard, flipping it, spinning and sucking the player into it then opening a new scene.
     this.postcard.on('pointerdown', () => {
-    this.postcard.disableInteractive()
-
-    this.tweens.add({
+     this.postcard.disableInteractive()
+     this.paperSound.play()
+     this.tweens.add({
         targets: this.postcard,
         scaleX: 0,
         duration: 300,
@@ -59,6 +68,7 @@ class Intro extends Phaser.Scene
 
         onYoyo: () => {
             this.postcard.setTexture('letterPortalBack')
+            this.portalSFX.play()
         },
 
         onComplete: () => {

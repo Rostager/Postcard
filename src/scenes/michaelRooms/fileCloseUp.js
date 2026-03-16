@@ -6,11 +6,7 @@ class FileCloseUp extends Phaser.Scene
 
     create()
     {
-        this.bgm = this.sound.add('closeUpBGM', {
-            loop: true,
-            volume: 0.10
-        })
-        this.bgm.play()
+        
         this.voiceOver = this.sound.add('creationVoice', {
             loop: false,
             volume: 0.50
@@ -22,10 +18,8 @@ class FileCloseUp extends Phaser.Scene
             
      //USE THIS TO KILL BGM AND OTHER AUDIO
              this.events.once('shutdown', () => {
-            
-            this.bgm.stop();
+            this.sound.stopByKey('computerBGM');
             this.voiceOver.stop()
-            
         });
 
           //FOR TYPEWRITTER EFFECT FOR LETTER

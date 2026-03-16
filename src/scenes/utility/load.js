@@ -97,8 +97,6 @@ class Load extends Phaser.Scene
         this.load.spritesheet('canvas2','./assets/images/ElevatorRoom/CanvasSheet2.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas3','./assets/images/ElevatorRoom/CanvasSheet3.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas4','./assets/images/ElevatorRoom/CanvasSheet4.png',{frameWidth: 147, frameHeight: 184})
-        //load audio------------------
-        this.load.audio('fireSound','./assets/sounds/fire.wav')
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
         //load audio------------------
@@ -112,6 +110,19 @@ class Load extends Phaser.Scene
         this.load.audio('creationVoice','./assets/sounds/VoiceOvers/CreationLetter.wav')
         this.load.audio('LeviathanVoice','./assets/sounds/VoiceOvers/leviatahnletterPostcard.wav')
         this.load.audio('ShieldVoice','./assets/sounds/VoiceOvers/ShieldBearerVoice.wav')
+        this.load.audio('artBGM','./assets/sounds/ArtGalleryPostCard.wav')
+        this.load.audio('computerBGM','./assets/sounds/ComputerBGM.wav')
+        this.load.audio('portalSFX','./assets/sounds/portalNoise.wav')
+        this.load.audio('castleFallingSFX','./assets/sounds/castleFallingSFX.wav')
+        this.load.audio('fireSound','./assets/sounds/fire.wav')
+        this.load.audio('glassTap','./assets/sounds/glassTap.wav')
+        this.load.audio('glassBreak','./assets/sounds/glassBreak.wav')
+        this.load.audio('brushSFX','./assets/sounds/brushSFX.wav')
+        this.load.audio('gearsSFX','./assets/sounds/gearsTurning.wav')
+        this.load.audio('paperSFX','./assets/sounds/paper.wav')
+        this.load.audio('purringSFX','./assets/sounds/purringSFX.wav')
+        this.load.audio('meowSFX','./assets/sounds/meowSFX.wav')
+
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }
