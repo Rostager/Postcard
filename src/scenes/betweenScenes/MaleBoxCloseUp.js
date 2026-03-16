@@ -27,14 +27,15 @@ class MaleBoxCloseUp extends Phaser.Scene
             duration: 30000,
             repeat: -1
         })
+        
         this.typewriterEvent = null;
         this.descriptionText = this.add.text(450,10,'',{
             fontFamily:'Georgia',
             fontSize: '20px',
             color:'0xffffff'
         }).setAngle(0)
-        //This is where you write the letter text.
-        this.typewriterEffect("Beneath the Leviathan Cross I stand,\nWhen cruelty grows, it’s us who feed it,\nWhen mercy is present, it’s us who grant it.\nWhen souls are shared, it’s us who bound it.\nWhen greed is fruitful, it’s us who suffer.\nWhen we are sick, it’s us who heals.\nWhen friends return, it’s us who greet.\nWhen the Leviathan judges, it’s us who stare.\n\nTo wait for salvation is to wait in vain,\nHumanity destroys, and humanity creates,\nThis is our burden, beneath the Leviathan.\nNo god made war, no god made greed.\nBeneath the Leviathan Cross I stand,\nKnowing the world was shaped by human hands.")
+        //This is where you write the letter text. Can't actually indent so sorry this is ugly lmao
+        this.typewriterEffect("Something writhes beneath the skin of all things. \nHere, in this jar, I have trapped a fragment of my \nessence, and it does not enjoy captivity. Search \nfor the relics. Recover each one. When all has been \nreturned, so may you.\n\n                                                                      - Robert")
         
          //USE THIS TO KILL BGM AND OTHER AUDIO
              this.events.once('shutdown', () => {
