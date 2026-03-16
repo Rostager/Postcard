@@ -14,6 +14,11 @@ class TowerEntranceUnlocked extends Phaser.Scene {
         //MAKE CRAZY VERSION ONCE FINISHED
         this.eye = new ClickableObject ( this, 805, 69, 'eyeBlink', "Its watching you...").setOrigin(0.5,0.5).play('eyeBlinkAnim')
         this.mouth = new ClickableObject ( this, 805, 215, 'mouthSheet', "It seems to be smiling...").setOrigin(0.5,0.5).play('mouthAnim').setAngle(90).setScale(0.80)
-
+     //USE THIS TO KILL BGM AND OTHER AUDIO
+             this.events.once('shutdown', () => {
+            
+            this.sound.stopByKey('closeUpBGM');
+            
+        });
     }
 }

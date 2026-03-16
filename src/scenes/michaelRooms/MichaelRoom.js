@@ -8,8 +8,8 @@ class MichaelRoom extends Phaser.Scene {
         this.sceneBG = this.add.image(width / 2, playHeight / 2, 'michaelRoomBG')
         //Object examples of making a clickable object and FindableObject
         this.michaelPillow = new ClickableObject(this, 246, 216, 'michaelPillow', "A pile of blue pillows...\n Something feels innoccent \n in the color.")
-        this.yoshi = new ClickableObject(this,327,26,'yoshiSit',"a weird looking little white\nand grey cat...")
-        this.izzy = new ClickableObject(this,510,253,'izzy',"a large cat...She might have\ntroubles getting up...")
+        this.yoshi = new ClickableObject(this,327,26,'yoshiSit',"a weird looking little white\nand grey cat...",'meowSFX')
+        this.izzy = new ClickableObject(this,510,253,'izzy',"a large cat...She might have\ntroubles getting up...",'purringSFX')
         
         //PLAY BGM
         this.bgm = this.sound.add('michaelRoomBGM', {
