@@ -27,7 +27,7 @@ class ElevatorRoomPainted extends Phaser.Scene {
         this.gear4 = this.add.image(800,1000,'gear3').setOrigin(0.5,0.5).setScale(0.5)
 
         this.robertSitting = this.add.sprite(900,250,'robertTalking').setOrigin(0.5,0.5).play('robertTalkAnim')
-
+        
         //Logic for clicking the canvases and cycling through images until gear
         this.canvas1.on('pointerdown', () => {
             if (this.canvas1Clicks < 3) {
