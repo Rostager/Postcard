@@ -21,6 +21,8 @@ class Load extends Phaser.Scene
        this.load.image('devBG','./assets/images/RobertRoom/DevScene.png')
        this.load.image('portal', './assets/images/PortalBackdrop.png')
        this.load.image('letterHand', './assets/images/LetterHand.png')
+       this.load.image('letterPortalBack','./assets/images/LetterPortalBack.png')
+       this.load.image('letterPortalFront','./assets/images/IntroLetterFront.png')
        //Michaels room
         this.load.image('michaelRoomBG','./assets/images/MichaelRoom/MichaelsRoomBG.png')
         this.load.image('michaelComputer','./assets/images/MichaelRoom/computer.png')
@@ -88,6 +90,7 @@ class Load extends Phaser.Scene
         this.load.spritesheet('eyeBlink','./assets/images/TowerEntrance/EyeBlinkSheet.png',{frameWidth: 207, frameHeight: 122})
         this.load.spritesheet('mouthSheet','./assets/images/TowerEntrance/MouthSheet.png',{frameWidth: 207, frameHeight: 135})
         this.load.spritesheet('robertTalking','./assets/images/ElevatorRoom/RobertTalkSheet.png',{frameWidth: 167, frameHeight: 198})
+        this.load.spritesheet('letterPortal','./assets/images/LetterPortalSheet.png',{frameWidth: 546, frameHeight: 353})
 
         this.load.spritesheet('canvas1','./assets/images/ElevatorRoom/CanvasSheet1.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas2','./assets/images/ElevatorRoom/CanvasSheet2.png',{frameWidth: 147, frameHeight: 184})
@@ -141,6 +144,20 @@ class Load extends Phaser.Scene
             this.anims.create({
                 key: 'mouthAnim',
                 frames: this.anims.generateFrameNumbers('mouthSheet',{start: 0, end: 5}),
+                frameRate: 4,
+                repeat: -1
+            })
+
+            this.anims.create({
+                key: 'letterPortalAnim',
+                frames: this.anims.generateFrameNumbers('letterPortal',{start: 0, end: 9}),
+                frameRate: 5,
+                repeat: -1
+            })
+
+            this.anims.create({
+                key: 'robertTalkAnim',
+                frames: this.anims.generateFrameNumbers('robertTalking',{start: 0, end: 1}),
                 frameRate: 4,
                 repeat: -1
             })

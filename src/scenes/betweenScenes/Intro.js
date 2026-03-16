@@ -25,7 +25,7 @@ class Intro extends Phaser.Scene
             pixelPerfect: true,
             alphaTolerance: 1
         })
-        this.postcard = this.add.image(width/2,height/2,'postcardFront').setAlpha(0)
+        this.postcard = this.add.image(width/2,height/2,'letterPortalFront').setAlpha(0)
         //I lowkey need to explain the envelope, the way its setup 
         this.envelope.on('pointerover',()=>{
             this.envelope.setTint(0xe7e7e7)
@@ -58,10 +58,13 @@ class Intro extends Phaser.Scene
         yoyo: true,
 
         onYoyo: () => {
-            this.postcard.setTexture('postcardBack')
+            this.postcard.setTexture('letterPortalBack')
         },
 
         onComplete: () => {
+            this.postcard.setAlpha(0)
+            this.postcard = this.add.sprite(width/2 + 15,height/2,'postcardBack').setOrigin(0.5,0.5)
+            this.postcard.anims.play('letterPortalAnim')
           this.time.delayedCall(1000,()=>{
             this.tweens.add({
                 targets: this.postcard,
