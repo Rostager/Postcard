@@ -4,6 +4,8 @@ class ElevatorRoom extends Phaser.Scene {
     }
 
     create(){
+        this.UiScene = this.scene.manager.getScene('uiScene')
+        this.UiScene.dot.y = 447
         //PLAY BGM
         this.bgm = this.sound.add('artBGM', {
             loop: true,

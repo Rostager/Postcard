@@ -4,6 +4,8 @@ class TowerEntrance extends Phaser.Scene {
     }
 
     create(){
+        this.UiScene = this.scene.manager.getScene('uiScene')
+        this.UiScene.dot.y = 483    
          //PLAY BGM
         this.bgm = this.sound.add('closeUpBGM', {
             loop: true,
