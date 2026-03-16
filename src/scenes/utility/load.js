@@ -122,6 +122,7 @@ class Load extends Phaser.Scene
         this.load.audio('paperSFX','./assets/sounds/paper.wav')
         this.load.audio('purringSFX','./assets/sounds/purringSFX.wav')
         this.load.audio('meowSFX','./assets/sounds/meowSFX.wav')
+        this.load.audio('chainsSFX','./assets/sounds/chainsPullingSFX.wav')
 
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')

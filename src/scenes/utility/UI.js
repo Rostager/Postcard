@@ -17,17 +17,20 @@ class UI extends Phaser.Scene
 
         //The hud and text
         this.add.image(0,playHeight,'hudImg').setOrigin(0,0)
-        this.descriptionText = this.add.text(200,playHeight+10,'',{
+        this.descriptionText = this.add.text(200,playHeight+15,'',{
             fontFamily:'uiFont',
-            fontSize: '30px'
+            fontSize: '30px',
+            color:'#09ff00',
+            stroke: '#000000',
+            strokeThickness: 5
         })
 
         //UI images for important object the player finds
-        this.michaelImportant1 = this.add.image(620,playHeight+ 40,'michaelShield').setOrigin(0.5,0.5).setAlpha(0)
-        this.michaelImportant2 = this.add.image(760,playHeight+ 40,'michaelArm').setOrigin(0.5,0.5).setAlpha(0).setScale(.25).setRotation(-225)
-        this.michaelImportant3 = this.add.image(890,playHeight+ 50,'michaelCreationFile').setOrigin(0.5,0.5).setAlpha(0)
-        this.robertImportant1 = this.add.sprite(620,playHeight+ 120,'bottleSheet').play('bottleAnim').setOrigin(0.5,0.5).setAlpha(0).setScale(.20).setAngle(50)
-        this.robertImportant2 = this.add.image(760,playHeight+ 120,'mirrorShard').setOrigin(0.5,0.5).setAlpha(0).setScale(.25).setRotation(-225)
+        this.michaelImportant1 = this.add.image(620,playHeight+ 40,'michaelShield').setOrigin(0.5,0.5).setTintFill(0x000000)
+        this.michaelImportant2 = this.add.image(760,playHeight+ 40,'michaelArm').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.25).setRotation(-225)
+        this.michaelImportant3 = this.add.image(890,playHeight+ 50,'michaelCreationFile').setOrigin(0.5,0.5).setTintFill(0x000000)
+        this.robertImportant1 = this.add.sprite(620,playHeight+ 120,'bottleSheet').play('bottleAnim').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.20).setAngle(50)
+        this.robertImportant2 = this.add.image(760,playHeight+ 120,'mirrorShard').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.25).setRotation(-225)
 
         this.dot = this.add.image(97, 520, 'dot').setOrigin(0.5, 0.5)
     //     //backarrow stuff NOT SURE WE WANT IT ANYMORE
@@ -110,23 +113,23 @@ class UI extends Phaser.Scene
 {
     switch(item){
     case 0:
-    this.michaelImportant1.setAlpha(1)
+    this.michaelImportant1.clearTint()
     this.itemsFound[0] = true
         break;
     case 1:
-        this.michaelImportant2.setAlpha(1)
+        this.michaelImportant2.clearTint()
     this.itemsFound[1] = true
         break;
     case 2:
-    this.michaelImportant3.setAlpha(1)
+    this.michaelImportant3.clearTint()
     this.itemsFound[2] = true
         break;
     case 3:
-    this.robertImportant1.setAlpha(1)
+    this.robertImportant1.clearTint()
     this.itemsFound[3] = true
         break;
     case 4:
-    this.robertImportant2.setAlpha(1)
+    this.robertImportant2.clearTint()
     this.itemsFound[4] = true
         break;
     case 5:
