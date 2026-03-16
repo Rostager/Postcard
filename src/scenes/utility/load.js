@@ -49,6 +49,10 @@ class Load extends Phaser.Scene
         this.load.image('envelopeFinal','./assets/images/FinalLetterRoom/envelopeFinal.png')
         this.load.image('letterRoomBG','./assets/images/FinalLetterRoom/FinalLetterRoomBackGround.png')
         this.load.image('finalLetterBG','./assets/images/FinalLetterRoom/finalLetterBG.png')
+        this.load.image('robertGhost','./assets/images/FinalLetterRoom/RobertGhost.png')
+        this.load.image('michaelGhost','./assets/images/FinalLetterRoom/MichaelGhost.png')
+        this.load.image('ironMaidenShut','./assets/images/FinalLetterRoom/IronMaidenShut.png')
+        this.load.image('ironMaidenOpen','./assets/images/FinalLetterRoom/IronMaidenOpen.png')
 
         //Play Room
         this.load.image('playBG','./assets/images/PlayRoom/PlayBG.png')
@@ -82,6 +86,7 @@ class Load extends Phaser.Scene
         this.load.image('elevatorClosed','./assets/images/ElevatorRoom/ElevatorClosed.png')
         this.load.image('elevatorOpen','./assets/images/ElevatorRoom/ElevatorOpen.png')
         this.load.image('robertStanding','./assets/images/ElevatorRoom/RobertStanding.png')
+
         // this.load.image('towerMirror','./assets/images/TowerEntrance/Mirror.png')
         this.load.spritesheet('towerMirror','./assets/images/TowerEntrance/MirrorSheet.png',{frameWidth: 204, frameHeight: 300})
 
@@ -97,6 +102,8 @@ class Load extends Phaser.Scene
         this.load.spritesheet('canvas2','./assets/images/ElevatorRoom/CanvasSheet2.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas3','./assets/images/ElevatorRoom/CanvasSheet3.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas4','./assets/images/ElevatorRoom/CanvasSheet4.png',{frameWidth: 147, frameHeight: 184})
+
+        this.load.spritesheet('ironMaiden','./assets/images/FinalLetterRoom/IronMaidenSheet.png',{frameWidth: 246, frameHeight: 339})
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
         //load audio------------------

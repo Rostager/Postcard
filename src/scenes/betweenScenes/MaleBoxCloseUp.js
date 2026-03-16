@@ -18,8 +18,8 @@ class MaleBoxCloseUp extends Phaser.Scene
         this.add.rectangle(0,0,width,playHeight,0x000000).setOrigin(0,0)
         this.sceneBG = this.add.image(width/2,playHeight/2,'portal').setOrigin(0.5,0.5)
         this.letterHand = this.add.image(width/2,playHeight/2,'letterHand').setOrigin(0.5,0.5)
-        this.bottle = new FindableObject(this,225,180,'mailBox','towerUnlockedScene',3).play('bottleAnim').setOrigin(0.5,0.5)
-        
+        this.bottle = new FindableObject(this,225,180,'mailBox','towerUnlockedScene',3).play('bottleAnim').setOrigin(0.5,0.5) 
+        //this.bottle = new FindableObject(this,225,180,'mailBox','finalLetterRoomScene',3).play('bottleAnim').setOrigin(0.5,0.5)
         //background rotate slowly
         this.tweens.add({
             targets: this.sceneBG,
