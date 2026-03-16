@@ -34,6 +34,10 @@ class Intro extends Phaser.Scene
             alphaTolerance: 1
         })
         this.postcard = this.add.image(width/2,height/2,'letterPortalFront').setAlpha(0)
+
+        //text
+        this.add.text("A Letter has arrived")
+
         //I lowkey need to explain the envelope, the way its setup 
         this.envelope.on('pointerover',()=>{
             this.envelope.setTint(0xe7e7e7)
