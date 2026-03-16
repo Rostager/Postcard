@@ -14,17 +14,22 @@ class ElevatorRoomPainted extends Phaser.Scene {
         this.elevatorDoor = new DoorWay(this, 480, 1000, 'elevatorClosed', 'michaelRoomScene', 'elevatorOpen').setOrigin(0.5,0.5)
         this.sceneBGBottom = this.add.rectangle(480,320,960,80,0xffffff).setOrigin(0.5,0.5) 
 
-        this.canvas1 = new ClickableObject(this,160,160,'canvas1', 'An Empty Canvas').setOrigin(0.5,0.5).setFrame(0)
+        this.canvas1 = new ClickableObject(this,160,160,'canvas1', 'An Empty Canvas','brushSFX').setOrigin(0.5,0.5).setFrame(0)
         this.gear1 = this.add.image(160,1000,'gear4').setOrigin(0.5,0.5).setScale(0.5)
 
-        this.canvas2 = new ClickableObject(this,320,160,'canvas2', 'An Empty Canvas').setOrigin(0.5,0.5).setFrame(0)
+        this.canvas2 = new ClickableObject(this,320,160,'canvas2', 'An Empty Canvas','brushSFX').setOrigin(0.5,0.5).setFrame(0)
         this.gear2 = this.add.image(320,1000,'gear1').setOrigin(0.5,0.5).setScale(0.5)
 
-        this.canvas3 = new ClickableObject(this,640,160,'canvas3', 'An Empty Canvas').setOrigin(0.5,0.5).setFrame(0)
+        this.canvas3 = new ClickableObject(this,640,160,'canvas3', 'An Empty Canvas','brushSFX').setOrigin(0.5,0.5).setFrame(0)
         this.gear3 = this.add.image(640,1000,'gear2').setOrigin(0.5,0.5).setScale(0.5)
 
-        this.canvas4 = new ClickableObject(this,800,160,'canvas4', 'An Empty Canvas').setOrigin(0.5,0.5).setFrame(0)
+        this.canvas4 = new ClickableObject(this,800,160,'canvas4', 'An Empty Canvas','brushSFX').setOrigin(0.5,0.5).setFrame(0)
         this.gear4 = this.add.image(800,1000,'gear3').setOrigin(0.5,0.5).setScale(0.5)
+        //Logic to kill BGM on Scene Close
+         this.events.once('shutdown', () => {
+            this.sound.stopByKey('artBGM');
+            this.sound.stopByKey('gearsSFX');
+        });
 
         this.robertSitting = this.add.sprite(900,250,'robertTalking').setOrigin(0.5,0.5).play('robertTalkAnim')
         
@@ -111,11 +116,16 @@ class ElevatorRoomPainted extends Phaser.Scene {
     }
 
     update(time, delta){
+        //Might want to add the elevatorDoorOpen bool to this if to make it only run once, this may add lots of tweens making performance issues.
         if(this.canvas1Clicks == 3 && this.canvas2Clicks == 3 && this.canvas3Clicks == 3 && this.canvas4Clicks == 3){
             //Make the gears rotate once all the paintings are done
             if(this.elevatorDoorOpen == false){
                 this.elevatorDoorOpen = true;
                 this.elevatorDoor.y = 400
+                this.sound.play('gearsSFX',{
+                    volume:.5,
+                    loop:true
+                })
             }
             this.tweens.add({
                 targets: [this.gear1, this.gear2],
