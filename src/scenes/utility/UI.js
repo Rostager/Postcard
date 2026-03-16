@@ -29,6 +29,7 @@ class UI extends Phaser.Scene
         this.robertImportant1 = this.add.sprite(620,playHeight+ 120,'bottleSheet').play('bottleAnim').setOrigin(0.5,0.5).setAlpha(0).setScale(.20).setAngle(50)
         this.robertImportant2 = this.add.image(760,playHeight+ 120,'mirrorShard').setOrigin(0.5,0.5).setAlpha(0).setScale(.25).setRotation(-225)
 
+        this.dot = this.add.image(97, 520, 'dot').setOrigin(0.5, 0.5)
     //     //backarrow stuff NOT SURE WE WANT IT ANYMORE
     //     this.backArrow = this.add.image(50,50,'backArrow').setOrigin(0.5,0.5)
     //     this.backArrow.setInteractive({

@@ -4,6 +4,8 @@ class FinalLetterRoom extends Phaser.Scene {
     }
 
     create() {
+         this.UiScene = this.scene.manager.getScene('uiScene')
+         this.UiScene.dot.y = 375
         //PLAY BGM
         this.bgm = this.sound.add('IntroBGM', {
             loop: true,

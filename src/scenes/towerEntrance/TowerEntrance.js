@@ -4,6 +4,9 @@ class TowerEntrance extends Phaser.Scene {
     }
 
     create(){
+        this.UiScene = this.scene.manager.getScene('uiScene')
+        this.UiScene.dot.y = 483    
+
         this.mirrorClicks = 0
         this.mirrorBroken = false
         this.towerDoorClickable = new ClickableObject(this, 482, 170, 'towerDoorClosed', "The door is locked tight.").setOrigin(0.5,0.5).setScale(1.2)
