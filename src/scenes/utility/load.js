@@ -20,12 +20,13 @@ class Load extends Phaser.Scene
         // optional loading text
         const loadingText = this.add.text(width / 2, height / 2 - 50, 'Loading...', {
             fontSize: '24px',
-            color: '#ffffff'
+            color: '#ffffff',
+            
         }).setOrigin(0.5);
 
         const percentText = this.add.text(width / 2, height / 2, '0%', {
             fontSize: '18px',
-            color: '#ffffff'
+            color: '#000000'
         }).setOrigin(0.5)
 
         // update bar as files load
