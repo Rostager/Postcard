@@ -6,6 +6,46 @@ class Load extends Phaser.Scene
 
     preload()
     {
+        //LOAD BAR 
+        const width = this.scale.width;
+        const height = this.scale.height
+
+        const progressBox = this.add.graphics()
+        const progressBar = this.add.graphics()
+
+        // background box
+        progressBox.fillStyle(0x222222, 0.8)
+        progressBox.fillRect(width / 2 - 160, height / 2 - 25, 320, 50)
+
+        // optional loading text
+        const loadingText = this.add.text(width / 2, height / 2 - 50, 'Loading...', {
+            fontSize: '24px',
+            color: '#ffffff'
+        }).setOrigin(0.5);
+
+        const percentText = this.add.text(width / 2, height / 2, '0%', {
+            fontSize: '18px',
+            color: '#ffffff'
+        }).setOrigin(0.5)
+
+        // update bar as files load
+        this.load.on('progress', (value) => {
+            progressBar.clear();
+            progressBar.fillStyle(0xffffff, 1)
+            progressBar.fillRect(width / 2 - 150, height / 2 - 15, 300 * value, 30);
+
+            percentText.setText(Math.floor(value * 100) + '%')
+        })
+
+        // cleanup when done
+        this.load.on('complete', () => {
+            progressBar.destroy();
+            progressBox.destroy();
+            loadingText.destroy();
+            percentText.destroy();
+        })
+
+
        //load images that dont have a Strong room relation---------------
        this.load.image('hudImg',                './assets/images/Other/Hud.png')
        this.load.image('backArrow',             './assets/images/Other/backArrow.png')
