@@ -26,11 +26,12 @@ class UI extends Phaser.Scene
         })
 
         //UI images for important object the player finds
-        this.michaelImportant1 = this.add.image(620,playHeight+ 40,'michaelShield').setOrigin(0.5,0.5).setTintFill(0x000000)
-        this.michaelImportant2 = this.add.image(760,playHeight+ 40,'michaelArm').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.25).setRotation(-225)
-        this.michaelImportant3 = this.add.image(890,playHeight+ 50,'michaelCreationFile').setOrigin(0.5,0.5).setTintFill(0x000000)
-        this.robertImportant1 = this.add.sprite(620,playHeight+ 120,'bottleSheet').play('bottleAnim').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.20).setAngle(50)
-        this.robertImportant2 = this.add.image(760,playHeight+ 120,'mirrorShard').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.25).setRotation(-225)
+        this.michaelImportant1 = this.add.image(620,playHeight+ 120,'michaelShield').setOrigin(0.5,0.5).setTintFill(0x000000)
+        this.michaelImportant2 = this.add.image(760,playHeight+ 120,'michaelArm').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.25).setRotation(-225)
+        this.michaelImportant3 = this.add.image(890,playHeight+ 130,'michaelCreationFile').setOrigin(0.5,0.5).setTintFill(0x000000)
+        this.robertImportant1 = this.add.sprite(620,playHeight+ 40,'bottleSheet').play('bottleAnim').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.20).setAngle(50)
+        this.robertImportant2 = this.add.image(760,playHeight+ 40,'mirrorShard').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.20).setAngle(0)
+        this.robertImportant3 = this.add.image(890,playHeight+ 40,'robertArm').setOrigin(0.5,0.5).setTintFill(0x000000).setScale(.50).setAngle(0)
 
         this.dot = this.add.image(97, 520, 'dot').setOrigin(0.5, 0.5)
     //     //backarrow stuff NOT SURE WE WANT IT ANYMORE
@@ -133,7 +134,7 @@ class UI extends Phaser.Scene
     this.itemsFound[4] = true
         break;
     case 5:
-
+    this.robertImportant3.clearTint()
     this.itemsFound[5] = true
         break;
     }

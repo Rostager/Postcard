@@ -30,7 +30,7 @@ class Play extends Phaser.Scene
         this.chainRight1 = this.add.tileSprite(785,-50 ,0,0,'chain').setAngle(-315)
        // this.longTowerRight1 = this.add.image(700,258,'longTower').setOrigin(0.5,1).setScale(0.5)
         this.chainRight2 = this.add.tileSprite(885,75 ,0,0,'chain').setAngle(-290)
-        this.towerLocked = new ClickableObject(this,459,135,'tower','Maybe I should look around some more')
+        this.towerLocked = new ClickableObject(this,459,135,'tower','Maybe I should look around\nsome more')
         
 
         this.maleBox = new FindableObject(this,689,250,'mailBox','maleBoxCloseUpScene',9).setScale(.5).play('mailBoxAnim').setOrigin(0.5,0.5)
@@ -51,8 +51,7 @@ class Play extends Phaser.Scene
         
        
 
-        //DEBUG DOOR
-        this.toMichael = new DoorWay(this,100,100,'yoshiSit','theFinalLetterScene') 
+        
     }
 
     update(time,delta){

@@ -12,14 +12,15 @@ class Credits extends Phaser.Scene
 
     create()
     {
+        
        this.cameras.main.fadeIn(1000, 0, 0, 0); 
-       this.credits = this.add.text(width/2,height/2,"Made by: Michael And Robert Stager",creditConfig).setOrigin(0.5)
+       this.credits = this.add.text(width/2,height/2,"Made by: Michael And Robert Stager\nfor Cadian Hickman.",creditConfig).setOrigin(0.5)
        this.title = this.add.text(width/2,height + 100,"Remix Our Memories ",creditConfig).setOrigin(0.5)
        this.nathanThanks = this.add.text(width/2,height + 150,"Special Thank you to Nathan Altice,\nfor such an amazing journy\nand inspiring and motivating us\nto produce such great work.",creditConfig).setOrigin(0.5)
        //mainmenuButton and logic
        this.mainMenuButton = this.add.image(width/2, height-100,'yoshiSit').setAlpha(0).setInteractive()
         this.mainMenuButton.on('pointerdown',()=>{
-            this.start.Scene('mainMenuScene')
+            this.scene.start('mainMenuScene')
         })
         this.mainMenuButton.on('pointerover',()=>{
             this.mainMenuButton.setScale(this.mainMenuButton.scale + 0.1)
