@@ -14,10 +14,8 @@ class TowerEntranceUnlocked extends Phaser.Scene {
         this.mouth = new ClickableObject ( this, 805, 215, 'mouth2Sheet', "It's gone insane").setOrigin(0.5,0.5).play('mouthAnim2').setAngle(90).setScale(0.80)
 
         //USE THIS TO KILL BGM AND OTHER AUDIO
-             this.events.once('shutdown', () => {
-            
+        this.events.once('shutdown', () => { 
             this.sound.stopByKey('closeUpBGM')
-            
         })
     }
 }
