@@ -6,19 +6,16 @@ class MaleBoxCloseUp extends Phaser.Scene
 
     create()
     {   
-
-         this.voiceOver = this.sound.add('maleBoxVoice',{
+        this.voiceOver = this.sound.add('maleBoxVoice',{
             volume: 0.60,
             loop: false
         })
         this.voiceOver.play()
 
         //USE THIS TO KILL BGM AND OTHER AUDIO
-             this.events.once('shutdown', () => {
-            
-            this.voiceOver.stop();
-            
-        });
+            this.events.once('shutdown', () => {
+            this.voiceOver.stop()
+        })
         
 
         //add black bg so there isn't red clipping when the portal bg is rotating
@@ -55,31 +52,29 @@ class MaleBoxCloseUp extends Phaser.Scene
     }
 
     typewriterEffect(fullText) {
-    // kill the old typing event if one is still running
-    if (this.typewriterEvent) {
-        this.typewriterEvent.remove(false)
-        this.typewriterEvent = null
-    }
-
-    let index = 0
-    const speed = 10
-
-    this.descriptionText.setText('')
-
-    this.typewriterEvent = this.time.addEvent({
-        delay: speed,
-        repeat: fullText.length - 1,
-        callback: () => {
-            this.descriptionText.setText(this.descriptionText.text + fullText[index])
-            index++
-
-            // cleanup when finished
-            if (index >= fullText.length) {
-                this.typewriterEvent = null
-            }
+        // kill the old typing event if one is still running
+        if (this.typewriterEvent) {
+            this.typewriterEvent.remove(false)
+            this.typewriterEvent = null
         }
-    })
+
+        let index = 0
+        const speed = 10
+
+        this.descriptionText.setText('')
+
+        this.typewriterEvent = this.time.addEvent({
+            delay: speed,
+            repeat: fullText.length - 1,
+            callback: () => {
+                this.descriptionText.setText(this.descriptionText.text + fullText[index])
+                index++
+                // cleanup when finished
+                if (index >= fullText.length) {
+                    this.typewriterEvent = null
+                }
+            }
+        })
     }
 
-    
 }
