@@ -25,6 +25,9 @@ class Load extends Phaser.Scene
        this.load.image('letterPortalFront','./assets/images/IntroLetterFront.png')
        this.load.image('dot', './assets/images/Dot1.png')
        this.load.image('menuPortal', './assets/images/BigMainMenuPortal.png')
+       this.load.image('playButton', './assets/images/playButton.png')
+       this.load.image('creditsButton', './assets/images/creditsButton.png')
+       this.load.image('title', './assets/images/title.png')
        //Michaels room
         this.load.image('michaelRoomBG','./assets/images/MichaelRoom/MichaelsRoomBG.png')
         this.load.image('michaelComputer','./assets/images/MichaelRoom/computer.png')
@@ -55,6 +58,8 @@ class Load extends Phaser.Scene
         this.load.image('michaelGhost','./assets/images/FinalLetterRoom/MichaelGhost.png')
         this.load.image('ironMaidenShut','./assets/images/FinalLetterRoom/IronMaidenShut.png')
         this.load.image('ironMaidenOpen','./assets/images/FinalLetterRoom/IronMaidenOpen.png')
+        this.load.image('stamp','./assets/images/sendHomeStamp.png')
+
 
         //Play Room
         this.load.image('playBG','./assets/images/PlayRoom/PlayBG.png')
@@ -121,6 +126,8 @@ class Load extends Phaser.Scene
         this.load.audio('creationVoice','./assets/sounds/VoiceOvers/CreationLetter.wav')
         this.load.audio('LeviathanVoice','./assets/sounds/VoiceOvers/leviatahnletterPostcard.wav')
         this.load.audio('ShieldVoice','./assets/sounds/VoiceOvers/ShieldBearerVoice.wav')
+        this.load.audio('finalLetterVoice','./assets/sounds/VoiceOvers/FinalLetterVoice.wav')
+        this.load.audio('remixVoice','./assets/sounds/VoiceOvers/remixOurMemories.wav')
         this.load.audio('artBGM','./assets/sounds/ArtGalleryPostCard.wav')
         this.load.audio('computerBGM','./assets/sounds/ComputerBGM.wav')
         this.load.audio('portalSFX','./assets/sounds/portalNoise.wav')
@@ -136,6 +143,7 @@ class Load extends Phaser.Scene
         this.load.audio('chainsSFX','./assets/sounds/chainsPullingSFX.wav')
         this.load.audio('metalSlamSFX','./assets/sounds/metalSlam.wav')
         this.load.audio('metalOpenSFX','./assets/sounds/metalOpen.wav')
+
 
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
@@ -202,6 +210,6 @@ class Load extends Phaser.Scene
                 repeat: -1
             })
 
-        this.scene.start('mainMenu')
+        this.scene.start('mainMenuScene')
     }
 }
