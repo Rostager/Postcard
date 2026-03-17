@@ -16,12 +16,12 @@ let config = {
     autoCenter: Phaser.Scale.CENTER_BOTH
     },
     scene: [Load,MainMenu,Intro,
-            Play,MaleBoxCloseUp,TowerUnlocked,TowerDoor,StairWell,
+            Play,MaleBoxCloseUp,TowerUnlocked,
             TowerEntrance,MirrorShardCloseUp,TowerEntranceUnlocked,
             ElevatorRoom,RobertArmCloseUp,ElevatorRoomPainted,
             MichaelRoom, ShieldCloseUp, ComputerCloseUp, FurnaceCloseUp, FileCloseUp,
             FinalLetterRoom, TheFinalLetter, 
-            RobertRoom,Credits,
+            Credits,
             UI  ]
 }
 let game = new Phaser.Game(config); 

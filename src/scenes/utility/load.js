@@ -7,18 +7,14 @@ class Load extends Phaser.Scene
     preload()
     {
        //load images---------------
-       this.load.image('testImg','./assets/images/testImg.png')
+      
        this.load.image('hudImg','./assets/images/Hud.png')
-       this.load.image('testBG','./assets/images/testBG.png')
        this.load.image('backArrow','./assets/images/backArrow.png')
        this.load.image('introBG','./assets/images/introBG.png')
-       this.load.image('postcardFront','./assets/images/postcardFront.png')
-       this.load.image('postcardBack','./assets/images/postcardBack.png')
        this.load.image('introEnvelope','./assets/images/Intro-Envelope.png')
        this.load.image('pointerDefault','./assets/images/Pointer.png')
        this.load.image('pointerHover','./assets/images/Hover.png')
        this.load.image('pointerHold','./assets/images/Hold.png')
-       this.load.image('devBG','./assets/images/RobertRoom/DevScene.png')
        this.load.image('portal', './assets/images/PortalBackdrop.png')
        this.load.image('letterHand', './assets/images/LetterHand.png')
        this.load.image('letterPortalBack','./assets/images/LetterPortalBack.png')
@@ -50,7 +46,6 @@ class Load extends Phaser.Scene
         this.load.image('izzy','./assets/images/MichaelRoom/izzy.png')
         this.load.image('michael','./assets/images/MichaelRoom/michaelTheMan.png')
         //FinalLetterRoom
-        this.load.image('tableFinal','./assets/images/FinalLetterRoom/tableFinal.png')
         this.load.image('envelopeFinal','./assets/images/FinalLetterRoom/envelopeFinal.png')
         this.load.image('letterRoomBG','./assets/images/FinalLetterRoom/FinalLetterRoomBackGround.png')
         this.load.image('finalLetterBG','./assets/images/FinalLetterRoom/finalLetterBG.png')
@@ -69,8 +64,6 @@ class Load extends Phaser.Scene
         this.load.image('michaelShelf','./assets/images/MichaelRoom/shelf.png')
         this.load.image('michaelShelfOpen','./assets/images/MichaelRoom/shelfOpen.png')
         this.load.image('chain','./assets/images/PlayRoom/Chain.png')
-        this.load.image('longTower','./assets/images/PlayRoom/LongTower.png')
-        this.load.image('playLetter','./assets/images/PlayRoom/PlayLetter.png')
         this.load.image('maleboxOpen','./assets/images/PlayRoom/MaleBoxPostClick.png')
         this.load.image('lettersFront','./assets/images/PlayRoom/LetterFront.png')
         this.load.image('lettersBack','./assets/images/PlayRoom/LetterBack.png')
@@ -94,7 +87,7 @@ class Load extends Phaser.Scene
         this.load.image('elevatorOpen','./assets/images/ElevatorRoom/ElevatorOpen.png')
         this.load.image('robertStanding','./assets/images/ElevatorRoom/RobertStanding.png')
 
-        // this.load.image('towerMirror','./assets/images/TowerEntrance/Mirror.png')
+       
         this.load.spritesheet('towerMirror','./assets/images/TowerEntrance/MirrorSheet.png',{frameWidth: 204, frameHeight: 300})
 
         //load spritesheets---------------
@@ -134,7 +127,6 @@ class Load extends Phaser.Scene
         this.load.audio('artBGM','./assets/sounds/ArtGalleryPostCard.wav')
         this.load.audio('computerBGM','./assets/sounds/ComputerBGM.wav')
         this.load.audio('portalSFX','./assets/sounds/portalNoise.wav')
-        this.load.audio('castleFallingSFX','./assets/sounds/castleFallingSFX.wav')
         this.load.audio('fireSound','./assets/sounds/fire.wav')
         this.load.audio('glassTap','./assets/sounds/glassTap.wav')
         this.load.audio('glassBreak','./assets/sounds/glassBreak.wav')
