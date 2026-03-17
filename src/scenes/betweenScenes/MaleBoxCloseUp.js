@@ -7,7 +7,18 @@ class MaleBoxCloseUp extends Phaser.Scene
     create()
     {   
 
-        //PLAY BGM
+         this.voiceOver = this.sound.add('maleBoxVoice',{
+            volume: 0.60,
+            loop: false
+        })
+        this.voiceOver.play()
+
+        //USE THIS TO KILL BGM AND OTHER AUDIO
+             this.events.once('shutdown', () => {
+            
+            this.voiceOver.stop();
+            
+        });
         
 
         //add black bg so there isn't red clipping when the portal bg is rotating
