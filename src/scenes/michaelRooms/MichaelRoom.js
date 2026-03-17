@@ -4,11 +4,11 @@ class MichaelRoom extends Phaser.Scene {
     }
 
     create() {
+        //grab a reference to the UI and move the map dot
         this.UiScene = this.scene.manager.getScene('uiScene')
         this.UiScene.dot.y = 411
-        //Background 
+        //Load images and interactables
         this.sceneBG = this.add.image(width / 2, playHeight / 2, 'michaelRoomBG')
-        //Object examples of making a clickable object and FindableObject
         this.michaelPillow = new ClickableObject(this, 246, 216, 'michaelPillow', "A pile of blue pillows...\n Something feels innoccent \n in the color.")
         this.yoshi = new ClickableObject(this,327,26,'yoshiSit',"a weird looking little white\nand grey cat...",'meowSFX')
         this.izzy = new ClickableObject(this,510,253,'izzy',"a large cat...She might have\ntroubles getting up...",'purringSFX')
@@ -19,10 +19,10 @@ class MichaelRoom extends Phaser.Scene {
             loop: true,
             volume: 0.10
         });
-        this.bgm.play();
+        this.bgm.play()
        
 
-        //Important Items
+        //Important Items and there control flow for spawning
         if (!this.scene.manager.getScene('uiScene').itemsFound[0]) {
             this.michaelShield = new DoorWay(this, 718, 96, 'michaelShield', 'shieldCloseUpScene')
         }
@@ -38,31 +38,25 @@ class MichaelRoom extends Phaser.Scene {
          
            this.michaelComputer = new DoorWay(this, 776, 147, 'michaelComputer', 'computerCloseUpScene')
 
+        //What happens when all important items are found from this room
         if(this.scene.manager.getScene('uiScene').itemsFound[0] && this.scene.manager.getScene('uiScene').itemsFound[1] && this.scene.manager.getScene('uiScene').itemsFound[2])
         {
             this.michaelShelf = new DoorWay(this,388,84,'michaelShelf','finalLetterRoomScene','michaelShelfOpen')
             this.topShelf = this.add.image(380,0,'michaelShelf').setOrigin(0).setAlpha(0)
             this.michaelShelf.on('pointerover', () => {
-            this.topShelf.setAlpha(1)
-            this.topShelf.setScale(this.topShelf.scale + 0.15)
-             })
-              this.michaelShelf.on('pointerout', () => {
-            this.topShelf.setAlpha(0)
-            this.topShelf.setScale(this.topShelf.scale - 0.15)
-             })
-
-            
+                this.topShelf.setAlpha(1)
+                this.topShelf.setScale(this.topShelf.scale + 0.15)
+            })
+            this.michaelShelf.on('pointerout', () => {
+                this.topShelf.setAlpha(0)
+                this.topShelf.setScale(this.topShelf.scale - 0.15)
+            }) 
         }
+        //What happens when all important items are not found from this room
         else { this.michael = new ClickableObject(this, 620, 122, 'michael', "He seems to be lost in\n thought or maybe not\n thinking at all...")}
-
-             //USE THIS TO KILL BGM AND OTHER AUDIO
-             this.events.once('shutdown', () => {
-            
-            this.bgm.stop();
-            
-        });
-
+        //USE THIS TO KILL BGM AND OTHER AUDIO
+        this.events.once('shutdown', () => {    
+            this.bgm.stop()
+        })
     }
-
-
 }

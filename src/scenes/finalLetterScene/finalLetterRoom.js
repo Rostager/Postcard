@@ -4,8 +4,9 @@ class FinalLetterRoom extends Phaser.Scene {
     }
 
     create() {
-        this.maidenClicks = 1;
-        this.maidenLocked = false;
+        //Tracks maiden logics
+        this.maidenClicks = 1
+        this.maidenLocked = false
 
         this.UiScene = this.scene.manager.getScene('uiScene')
         this.UiScene.dot.y = 375
@@ -14,10 +15,10 @@ class FinalLetterRoom extends Phaser.Scene {
         this.bgm = this.sound.add('IntroBGM', {
             loop: true,
             volume: 0.30
-        });
-        this.bgm.play();
-
-        this.sceneBG = this.add.image(width / 2, playHeight / 2, 'letterRoomBG');
+        })
+        this.bgm.play()
+        //Declare images and interactables 
+        this.sceneBG = this.add.image(width / 2, playHeight / 2, 'letterRoomBG')
         this.robertGhost = new ClickableObject(this, 100, 190,'robertGhost', 'Remix our memories').setOrigin(0.5,0.5).setAlpha(0.25)
         this.michaelGhost = new ClickableObject(this, 860, 190,'michaelGhost', 'Remix our memories').setOrigin(0.5,0.5).setAlpha(0.25)
 
@@ -26,6 +27,7 @@ class FinalLetterRoom extends Phaser.Scene {
         this.ironMaidenopen = this.add.image(495,1000,'ironMaidenOpen').setOrigin(0.5,0.5)
         this.finalLetter = new DoorWay(this, 490, 1000, 'envelopeFinal', "theFinalLetterScene").setOrigin(0.5,0.5)
         
+        //Iron maiden events and logics
         this.ironMaiden.on('pointerdown', () => {
             if (this.maidenLocked) return
             // Move to the next frame each click
@@ -49,10 +51,9 @@ class FinalLetterRoom extends Phaser.Scene {
         })
 
          //USE THIS TO KILL BGM AND OTHER AUDIO
-             this.events.once('shutdown', () => {
+            this.events.once('shutdown', () => {
+            this.bgm.stop()
             
-            this.bgm.stop();
-            
-        });
+        })
     }
 }
