@@ -61,7 +61,7 @@ class Play extends Phaser.Scene
         });
 
         //DEBUG DOOR
-        this.toMichael = new DoorWay(this,100,100,'yoshiSit','michaelRoomScene')
+        this.toMichael = new DoorWay(this,100,100,'yoshiSit','theFinalLetterScene') 
     }
 
     update(time,delta){
