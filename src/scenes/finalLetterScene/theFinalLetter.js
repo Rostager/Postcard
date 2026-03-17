@@ -9,19 +9,25 @@ class TheFinalLetter extends Phaser.Scene {
         //PLAY BGM
          this.input.setDefaultCursor('')
         this.scene.stop('uiScene')
-        this.bgm = this.sound.add('artBGM', {
+        this.bgm = this.sound.add('grassBGM', {
             loop: true,
-            volume: 0.30
+            volume: 0.10
         });
         this.bgm.play();
+        this.voiceOver = this.sound.add('finalLetterVoice', {
+            loop: false,
+            volume: 0.60
+        });
+        this.voiceOver.play();
 
         this.bgImage = this.add.image(width/2,height/2,'finalLetterBG')
-        this.homeButton = this.add.image(100,playHeight+100,'yoshiSit').setAlpha(0).setInteractive()
+        this.homeButton = this.add.image(200,playHeight+100,'stamp').setAlpha(0).setInteractive()
         
         //USE THIS TO KILL BGM AND OTHER AUDIO
              this.events.once('shutdown', () => {
             
             this.bgm.stop();
+            this.voiceOver.stop();
             
         });
 

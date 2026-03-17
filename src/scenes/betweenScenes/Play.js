@@ -48,17 +48,8 @@ class Play extends Phaser.Scene
             yoyo: true,
             repeat: -1
         })
-        //EXAMPLE OF HOW TO SET UP AN IMPORTANT ITEM TO NOT SPAWN NEXT TIME YOU VISIT THE SCENE.
-        //if(!this.scene.manager.getScene('uiScene').itemsFound[0])
-       // {
-           // this.testImage3 = new FindableObject(this,850,250,'testImg','introScene',0)
-       // }
-       //USE THIS TO KILL BGM AND OTHER AUDIO
-             this.events.once('shutdown', () => {
-            
-            this.bgm.stop();
-            
-        });
+        
+       
 
         //DEBUG DOOR
         this.toMichael = new DoorWay(this,100,100,'yoshiSit','theFinalLetterScene') 

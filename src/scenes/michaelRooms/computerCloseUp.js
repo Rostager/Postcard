@@ -9,7 +9,7 @@ class ComputerCloseUp extends Phaser.Scene
          //PLAY BGM
         this.bgm = this.sound.add('computerBGM', {
             loop: true,
-            volume: 0.10
+            volume: 0.30
         });
         this.bgm.play();
          this.sceneBG = this.add.image(width/2,playHeight/2,'michaelComputerBG')
