@@ -23,6 +23,7 @@ class Credits extends Phaser.Scene
        this.credits = this.add.text(width/2,height/2,"Made by: Michael And Robert Stager\nfor Cadence Hickman.\n\nMusic and Sounds By:Michael Stager\nAnimations by: Robert Stager",creditConfig).setOrigin(0.5)
        this.title = this.add.text(width/2,height + 100,"Remix Our Memories ",creditConfig).setOrigin(0.5)
        this.nathanThanks = this.add.text(width/2,height + 150,"Special Thanks to Nathan Altice",creditConfig).setOrigin(0.5)
+       this.nathanImage = this.add.image(width/2, 420, "nathanPic").setOrigin(0.5,0.5).setAlpha(0)
        //mainmenuButton and logic
        this.mainMenuButton = this.add.image(width/2, height-100,'yoshiSit').setAlpha(0).setInteractive()
         this.mainMenuButton.on('pointerdown',()=>{
@@ -41,13 +42,20 @@ class Credits extends Phaser.Scene
         targets: this.credits,
         y: -150,
         duration: 5000
-    });
+    })
+
 
     this.tweens.add({
         targets: this.nathanThanks,
         y: height / 2,
         duration: 5000,
         onComplete: () => {
+            this.tweens.add({
+                targets: this.nathanImage,
+                alpha: 1,
+                yoyo: true,
+                duration: 3000
+            })
             this.time.delayedCall(4000, () => {
                 this.tweens.add({
                     targets: this.nathanThanks,
