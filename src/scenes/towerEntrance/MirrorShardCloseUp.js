@@ -25,7 +25,7 @@ class MirrorShardCloseUp extends Phaser.Scene
             color:'0xffffff'
         }).setAngle(0)
 
-        this.typewriterEffect("A mirror is patient, but never kind. If you \nwish to know yourself, you must look until the \nsurface resists you, until the face you have carried \nfor so long begins to crack at the edges. What falls \naway was never steady. What remains is a shard small, \nsharp, and honest. Take it with you. The way forward \nopens only to those who can endure their own reflection.")
+        this.typewriterEffect("A mirror is patient, but never kind. If you \nwish to know yourself, you must look until the \nsurface resists you, until the face you have carried \nfor so long begins to crack at the edges. What falls \naway was never steady. What remains is a shard small, \nsharp, and honest. Take it with you. The way forward \nopens only to those who can endure their own reflection.\n\n                                                                      - Robert")
         //background rotate slowly
         this.tweens.add({
             targets: this.sceneBG,
