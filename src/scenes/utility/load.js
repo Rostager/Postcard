@@ -128,6 +128,8 @@ class Load extends Phaser.Scene
         this.load.audio('ShieldVoice','./assets/sounds/VoiceOvers/ShieldBearerVoice.wav')
         this.load.audio('finalLetterVoice','./assets/sounds/VoiceOvers/FinalLetterVoice.wav')
         this.load.audio('remixVoice','./assets/sounds/VoiceOvers/remixOurMemories.wav')
+        this.load.audio('mirrorVoice','./assets/sounds/VoiceOvers/MirrorVoice.wav')
+        this.load.audio('handVoice','./assets/sounds/VoiceOvers/handVoice.wav')
         this.load.audio('artBGM','./assets/sounds/ArtGalleryPostCard.wav')
         this.load.audio('computerBGM','./assets/sounds/ComputerBGM.wav')
         this.load.audio('portalSFX','./assets/sounds/portalNoise.wav')

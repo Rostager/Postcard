@@ -30,7 +30,7 @@ class TowerUnlocked extends Phaser.Scene
         this.longTowerRight1 = this.add.image(600,258,'longTower').setOrigin(0.5,1).setScale(0.5)
         this.longTowerLeft1 = this.add.image(50,258,'longTower').setOrigin(0.5,1).setScale(0.5)
         this.ground2 = this.add.image(0,240,'playBG2').setOrigin(0,0)
-        this.sawGround = new ClickableObject(this,126 + 128 ,120 + 128,'sawGround','Where did this gear come\n from? \n Or is it a saw?').setOrigin(0.5,0.5)
+        this.sawGround = new ClickableObject(this,126 + 128 ,120 + 128,'sawGround','Where did this gear come\n from? Or is it a saw?').setOrigin(0.5,0.5)
        // this.chainRight = this.add.tileSprite(500,200,'chain')
        
        

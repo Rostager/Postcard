@@ -1,5 +1,9 @@
 //Creators: Michael & Robert Stager
-//Date:
+//Title: Remix our Memories
+//Hours spent on this porject 30+ hours ( legit hard to tell, been working on this since like feb 20)
+//Date: 3/16/20206
+//All code was made by Robert or Michael stager, with many many references to phaser examples (fr the examples are amazing)
+//Explaining the scene structure: We have lots of scenes because it stems from working together in unity,where if 2 people work in the same file/scene it leads to many merge conflicts, so this was a way to avoid that. And this structure worked very well for the game we where making.
 
 
 let config = {

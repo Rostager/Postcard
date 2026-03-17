@@ -6,12 +6,12 @@ class TheFinalLetter extends Phaser.Scene {
     }
 
     create() {
-        //PLAY BGM
+        
          this.input.setDefaultCursor('')
         this.scene.stop('uiScene')
         this.bgm = this.sound.add('grassBGM', {
             loop: true,
-            volume: 0.10
+            volume: 0.05
         });
         this.bgm.play();
         this.voiceOver = this.sound.add('finalLetterVoice', {
@@ -64,7 +64,7 @@ class TheFinalLetter extends Phaser.Scene {
     }
 
     let index = 0;
-    const speed = 10;
+    const speed = 50;
 
     this.descriptionText.setText('');
 

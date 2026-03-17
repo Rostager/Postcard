@@ -6,6 +6,19 @@ class MirrorShardCloseUp extends Phaser.Scene
     }
 
     create(){
+
+         //PLAY voiceover
+        this.voiceOver = this.sound.add('mirrorVoice', {
+            loop: false,
+            volume: 0.60
+        });
+        this.voiceOver.play();
+        //USE THIS TO KILL voiceOver AND OTHER AUDIO
+             this.events.once('shutdown', () => {
+            
+            this.voiceOver.stop();
+            
+        });
         //add black bg so there isn't red clipping when the portal bg is rotating
         this.add.rectangle(0,0,width,playHeight,0x000000).setOrigin(0,0)
         this.sceneBG = this.add.image(width/2,playHeight/2,'portal').setOrigin(0.5,0.5)
