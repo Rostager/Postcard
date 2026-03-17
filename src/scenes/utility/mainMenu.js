@@ -13,6 +13,10 @@ class MainMenu extends Phaser.Scene {
         this.backgroundImage= this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'menuPortal').setOrigin(0.5, 0.5)
 
         //make portal rotate
+       // this.add.tweens({
+
+       // })
+       this.scene.start('introScene')
         this.playButton = this.add.image(width/2,height/2,'playButton').setOrigin(0.5).setInteractive()
         this.creditsButton = this.add.image(width/2,height/2 + 100,'creditsButton').setOrigin(0.5).setInteractive()
         this.title = this.add.image(width/2,100,'title').setOrigin(0.5)

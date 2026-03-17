@@ -12,7 +12,20 @@ class RobertArmCloseUp extends Phaser.Scene
         this.letterHand = this.add.image(width/2,playHeight/2,'letterHand').setOrigin(0.5,0.5)
         this.robertArm = new FindableObject(this,225,180,'robertArm','elevatorRoomPaintedScene',5).setOrigin(0.5,0.5). setScale(2).setAngle(45)
         // this.shard = new FindableObject(this,225,180,'mailBox','towerUnlockedScene',3).play('bottleAnim').setOrigin(0.5,0.5)
-        
+        this.typewriterEvent = null;
+        this.descriptionText = this.add.text(450,10,'',{
+            fontFamily:'Georgia',
+            fontSize: '20px',
+            color:'0xffffff'
+        }).setAngle(0)
+
+
+
+
+
+
+        //This is where you write the letter text. Can't actually indent so sorry this is ugly lmao
+        this.typewriterEffect("This hand remembers what the rest of me nearly forgot. \nIt remembers scissors, pigment, and the quiet relief of \nturning hurt into form. When I could no longer carry \nmyself cleanly, art held the pieces for me. Take it now. \nPaint the waiting canvases. Let creation keep what \nsorrow could not.\n\n                                                                      - Robert")
         //background rotate slowly
         this.tweens.add({
             targets: this.sceneBG,
@@ -20,5 +33,32 @@ class RobertArmCloseUp extends Phaser.Scene
             duration: 30000,
             repeat: -1
         })
+    }
+
+    typewriterEffect(fullText) {
+    // kill the old typing event if one is still running
+    if (this.typewriterEvent) {
+        this.typewriterEvent.remove(false);
+        this.typewriterEvent = null;
+    }
+
+    let index = 0;
+    const speed = 10;
+
+    this.descriptionText.setText('');
+
+    this.typewriterEvent = this.time.addEvent({
+        delay: speed,
+        repeat: fullText.length - 1,
+        callback: () => {
+            this.descriptionText.setText(this.descriptionText.text + fullText[index]);
+            index++;
+
+            // cleanup when finished
+            if (index >= fullText.length) {
+                this.typewriterEvent = null;
+            }
+        }
+    });
     }
 }

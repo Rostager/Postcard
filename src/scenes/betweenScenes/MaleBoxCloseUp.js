@@ -46,28 +46,28 @@ class MaleBoxCloseUp extends Phaser.Scene
     typewriterEffect(fullText) {
     // kill the old typing event if one is still running
     if (this.typewriterEvent) {
-        this.typewriterEvent.remove(false);
-        this.typewriterEvent = null;
+        this.typewriterEvent.remove(false)
+        this.typewriterEvent = null
     }
 
-    let index = 0;
-    const speed = 10;
+    let index = 0
+    const speed = 10
 
-    this.descriptionText.setText('');
+    this.descriptionText.setText('')
 
     this.typewriterEvent = this.time.addEvent({
         delay: speed,
         repeat: fullText.length - 1,
         callback: () => {
-            this.descriptionText.setText(this.descriptionText.text + fullText[index]);
-            index++;
+            this.descriptionText.setText(this.descriptionText.text + fullText[index])
+            index++
 
             // cleanup when finished
             if (index >= fullText.length) {
-                this.typewriterEvent = null;
+                this.typewriterEvent = null
             }
         }
-    });
+    })
     }
 
     

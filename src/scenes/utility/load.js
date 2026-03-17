@@ -109,6 +109,8 @@ class Load extends Phaser.Scene
         this.load.spritesheet('canvas2','./assets/images/ElevatorRoom/CanvasSheet2.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas3','./assets/images/ElevatorRoom/CanvasSheet3.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas4','./assets/images/ElevatorRoom/CanvasSheet4.png',{frameWidth: 147, frameHeight: 184})
+        this.load.spritesheet('eyeRoll','./assets/images/TowerEntrance/EyeRollSheet.png',{frameWidth: 207, frameHeight: 135})
+        this.load.spritesheet('mouth2Sheet','./assets/images/TowerEntrance/MouthSheet2.png',{frameWidth: 207, frameHeight: 135})
 
         this.load.spritesheet('ironMaiden','./assets/images/FinalLetterRoom/IronMaidenSheet.png',{frameWidth: 246, frameHeight: 339})
         //load fonts------------------
@@ -190,9 +192,24 @@ class Load extends Phaser.Scene
             this.anims.create({
                 key: 'robertTalkAnim',
                 frames: this.anims.generateFrameNumbers('robertTalking',{start: 0, end: 1}),
-                frameRate: 4,
+                frameRate: 20,
                 repeat: -1
             })
+
+            this.anims.create({
+                key: 'rollingEyeAnim',
+                frames: this.anims.generateFrameNumbers('eyeRoll',{start: 0, end: 3}),
+                frameRate: 12,
+                repeat: -1
+            })
+
+            this.anims.create({
+                key: 'mouthAnim2',
+                frames: this.anims.generateFrameNumbers('mouth2Sheet',{start: 0, end: 3}),
+                frameRate: 12,
+                repeat: -1
+            })
+
         this.scene.start('mainMenuScene')
     }
 }
