@@ -6,7 +6,7 @@ let config = {
     type: Phaser.AUTO,
     width: 960, //720
     height: 540, //1280
-    backgroundColor: '#ff0000',
+    backgroundColor: '#460000',
     scale: {
     mode: Phaser.Scale.FIT,          // fit inside available space
     autoCenter: Phaser.Scale.CENTER_BOTH
@@ -17,7 +17,7 @@ let config = {
             ElevatorRoom,RobertArmCloseUp,ElevatorRoomPainted,
             MichaelRoom, ShieldCloseUp, ComputerCloseUp, FurnaceCloseUp, FileCloseUp,
             FinalLetterRoom, TheFinalLetter, 
-            RobertRoom,
+            RobertRoom,Credits,
             UI  ]
 }
 let game = new Phaser.Game(config); 
