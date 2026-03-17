@@ -24,6 +24,7 @@ class Load extends Phaser.Scene
        this.load.image('letterPortalBack','./assets/images/LetterPortalBack.png')
        this.load.image('letterPortalFront','./assets/images/IntroLetterFront.png')
        this.load.image('dot', './assets/images/Dot1.png')
+       this.load.image('menuPortal', './assets/images/BigMainMenuPortal.png')
        //Michaels room
         this.load.image('michaelRoomBG','./assets/images/MichaelRoom/MichaelsRoomBG.png')
         this.load.image('michaelComputer','./assets/images/MichaelRoom/computer.png')
@@ -184,6 +185,6 @@ class Load extends Phaser.Scene
                 frameRate: 4,
                 repeat: -1
             })
-        this.scene.start('introScene')
+        this.scene.start('mainMenu')
     }
 }

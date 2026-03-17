@@ -11,7 +11,7 @@ let config = {
     mode: Phaser.Scale.FIT,          // fit inside available space
     autoCenter: Phaser.Scale.CENTER_BOTH
     },
-    scene: [Load,Intro,
+    scene: [Load,MainMenu,Intro,
             Play,MaleBoxCloseUp,TowerUnlocked,TowerDoor,StairWell,
             TowerEntrance,MirrorShardCloseUp,TowerEntranceUnlocked,
             ElevatorRoom,RobertArmCloseUp,ElevatorRoomPainted,
