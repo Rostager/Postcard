@@ -12,11 +12,11 @@ class TowerUnlocked extends Phaser.Scene
             volume: 0.10
         });
         this.bgm.play();
-        this.castleFallingSFX = this.sound.add('castleFallingSFX', {
-            loop: false,
-            volume: 0.20
-        });
-        this.castleFallingSFX.play();
+      //  this.castleFallingSFX = this.sound.add('castleFallingSFX', {
+       //     loop: false,
+       //     volume: 0.20
+       // });
+       // this.castleFallingSFX.play();
         this.chainsPulling = this.sound.add('chainsSFX', {
             loop: true,
             volume: 0.1
@@ -27,10 +27,10 @@ class TowerUnlocked extends Phaser.Scene
         this.sceneBG = this.add.image(width/2,playHeight/2,'playBG')
         this.cloud1 = this.add.image(0,0,'cloud').setOrigin(0,0).setAlpha(.4)
         this.towerCloud = this.add.image(391,0,'towerCloud').setOrigin(0,0)
-        this.longTowerRight1 = this.add.image(600,258,'longTower').setOrigin(0.5,1).setScale(0.5)
-        this.longTowerLeft1 = this.add.image(50,258,'longTower').setOrigin(0.5,1).setScale(0.5)
+        //this.longTowerRight1 = this.add.image(600,258,'longTower').setOrigin(0.5,1).setScale(0.5)
+       // this.longTowerLeft1 = this.add.image(50,258,'longTower').setOrigin(0.5,1).setScale(0.5)
         this.ground2 = this.add.image(0,240,'playBG2').setOrigin(0,0)
-        this.sawGround = new ClickableObject(this,126 + 128 ,120 + 128,'sawGround','Where did this gear come\n from? \n Or is it a saw?').setOrigin(0.5,0.5)
+        this.sawGround = new ClickableObject(this,126 + 128 ,120 + 128,'sawGround','Where did this gear come\n from? \n Or is it a saw?').setOrigin(0.5,0.5).setScale(0.5)
        // this.chainRight = this.add.tileSprite(500,200,'chain')
        
        
