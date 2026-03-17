@@ -23,6 +23,7 @@ class Load extends Phaser.Scene
        this.load.image('playButton',            './assets/images/Other/playButton.png')
        this.load.image('creditsButton',         './assets/images/Other/creditsButton.png')
        this.load.image('title',                 './assets/images/Other/title.png')
+       this.load.image('nathanPic',             './assets/images/Other/NathanPhoto.jpg')
        //Michaels room---------------------------------
         this.load.image('michaelRoomBG',        './assets/images/MichaelRoom/MichaelsRoomBG.png')
         this.load.image('michaelComputer',      './assets/images/MichaelRoom/computer.png')
