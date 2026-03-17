@@ -117,7 +117,7 @@ class ElevatorRoomPainted extends Phaser.Scene {
 
     update(time, delta){
         //Might want to add the elevatorDoorOpen bool to this if to make it only run once, this may add lots of tweens making performance issues.
-        if(this.canvas1Clicks == 3 && this.canvas2Clicks == 3 && this.canvas3Clicks == 3 && this.canvas4Clicks == 3){
+        if(this.canvas1Clicks == 3 && this.canvas2Clicks == 3 && this.canvas3Clicks == 3 && this.canvas4Clicks == 3 &&this.elevatorDoorOpen == false){
             //Make the gears rotate once all the paintings are done
             if(this.elevatorDoorOpen == false){
                 this.elevatorDoorOpen = true;

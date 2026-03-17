@@ -8,11 +8,7 @@ class MaleBoxCloseUp extends Phaser.Scene
     {   
 
         //PLAY BGM
-        this.bgm = this.sound.add('closeUpBGM', {
-            loop: true,
-            volume: 0.10
-        });
-        this.bgm.play();
+        
 
         //add black bg so there isn't red clipping when the portal bg is rotating
         this.add.rectangle(0,0,width,playHeight,0x000000).setOrigin(0,0)
@@ -37,10 +33,11 @@ class MaleBoxCloseUp extends Phaser.Scene
         //This is where you write the letter text. Can't actually indent so sorry this is ugly lmao
         this.typewriterEffect("Something writhes beneath the skin of all things. \nHere, in this jar, I have trapped a fragment of my \nessence, and it does not enjoy captivity. Search \nfor the relics. Recover each one. When all has been \nreturned, so may you.\n\n                                                                      - Robert")
         
-         //USE THIS TO KILL BGM AND OTHER AUDIO
+        //USE THIS TO KILL BGM AND OTHER AUDIO
              this.events.once('shutdown', () => {
             
-            this.bgm.stop();
+            this.sound.stopByKey('grassBGM');
+             
             
         });
 

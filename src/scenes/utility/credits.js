@@ -19,7 +19,7 @@ class Credits extends Phaser.Scene
        //mainmenuButton and logic
        this.mainMenuButton = this.add.image(width/2, height-100,'yoshiSit').setAlpha(0).setInteractive()
         this.mainMenuButton.on('pointerdown',()=>{
-           // this.start.Scene('mainMenuScene')
+            this.start.Scene('mainMenuScene')
         })
         this.mainMenuButton.on('pointerover',()=>{
             this.mainMenuButton.setScale(this.mainMenuButton.scale + 0.1)
