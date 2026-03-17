@@ -6,21 +6,21 @@ class FurnaceCloseUp extends Phaser.Scene
     }
     create()
     {
-
-         this.sceneBG = this.add.image(width/2,playHeight/2,'michaelFurnaceCloseUp')
-         this.arm = new FindableObject(this,96,122,'michaelFurnaceArm','michaelRoomScene',1)
-         this.fireSound = this.sound.add('fireSound', {
-         loop: true,
-         volume: 0.1
-            });
-
-        this.fireSound.play();
+        //Add images and Interactables
+        this.sceneBG = this.add.image(width/2,playHeight/2,'michaelFurnaceCloseUp')
+        this.arm = new FindableObject(this,96,122,'michaelFurnaceArm','michaelRoomScene',1)
+        //Play background Audio and voice over
+        this.fireSound = this.sound.add('fireSound', {
+            loop: true,
+            volume: 0.1
+        });
+        this.fireSound.play()
         this.voiceOver = this.sound.add('LeviathanVoice', {
             loop: false,
             volume: 0.50
         })
         this.voiceOver.play()
-
+        //Event to kill audio on scene shutdown
         this.events.once('shutdown', () => {
             if (this.fireSound) {
             this.fireSound.stop()
@@ -45,27 +45,27 @@ class FurnaceCloseUp extends Phaser.Scene
     typewriterEffect(fullText) {
     // kill the old typing event if one is still running
     if (this.typewriterEvent) {
-        this.typewriterEvent.remove(false);
-        this.typewriterEvent = null;
+        this.typewriterEvent.remove(false)
+        this.typewriterEvent = null
     }
 
-    let index = 0;
-    const speed = 10;
+    let index = 0
+    const speed = 10
 
-    this.descriptionText.setText('');
+    this.descriptionText.setText('')
 
     this.typewriterEvent = this.time.addEvent({
         delay: speed,
         repeat: fullText.length - 1,
         callback: () => {
-            this.descriptionText.setText(this.descriptionText.text + fullText[index]);
+            this.descriptionText.setText(this.descriptionText.text + fullText[index])
             index++;
 
             // cleanup when finished
             if (index >= fullText.length) {
-                this.typewriterEvent = null;
+                this.typewriterEvent = null
             }
         }
-    });
+    })
 }
 }

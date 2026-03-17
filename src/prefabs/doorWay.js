@@ -9,24 +9,25 @@ class DoorWay extends Phaser.GameObjects.Sprite
             pixelPerfect: true,
             alphaTolerance: 1  
         })
+        //set the open state sprite to the normal sprite if one isnt provided
         if(openSprite == null)
         {
             openSprite = key
         }
       
-         // hover feedback
+         //hover feedback
         this.on('pointerover', () => {
             this.setScale(this.scale + 0.1)
             this.scene.scene.get('uiScene').cursorImage.setTexture('pointerHover')
             this.setTexture(openSprite)
-        });
+        })
         this.on('pointerout',  () => {
             this.setScale(this.scale - 0.1)
             this.scene.scene.get('uiScene').cursorImage.setTexture('pointerDefault')
             this.setTexture(key)
-        });
+        })
 
-        // click behavior, get the text from the ui scene and set it to description string.
+        // click behavior
         this.on('pointerdown', () => {
             this.scene.scene.start(tranScene)
         })

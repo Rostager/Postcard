@@ -1,3 +1,4 @@
+//Config for credit text
 let creditConfig = {
     fontFamily:'Georgia',
         fontSize: '50px',

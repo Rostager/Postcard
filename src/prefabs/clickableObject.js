@@ -14,29 +14,29 @@ class ClickableObject extends Phaser.GameObjects.Sprite
     if(sfx == null){
         sfx= 'metal'
     }
-      this.hovering
-         // hover feedback
+        this.hovering
+        // hover feedback
         this.on('pointerover', () => {
             this.setScale(this.scale + 0.1)
-             this.scene.scene.get('uiScene').cursorImage.setTexture('pointerHover')
-             this.hovering = true
-            //perhaps play a sound
-        });
+            this.scene.scene.get('uiScene').cursorImage.setTexture('pointerHover')
+            this.hovering = true
+        })
+
         this.on('pointerout',  () => {
             this.setScale(this.scale - 0.1)
             this.scene.scene.get('uiScene').cursorImage.setTexture('pointerDefault')
-             this.hovering = true
-        });
+            this.hovering = true
+        })
 
         // click behavior, get the text from the ui scene and set it to description string.
         this.on('pointerdown', () => {
-            
             this.scene.sound.play(sfx);
             this.scene.scene.get('uiScene').typewriterEffect(this.textDescription)
         })
     
     }
 
+    //A function that can be called to set the Description
     changeDescription(newDescription){
        this.textDescription = newDescription
     }

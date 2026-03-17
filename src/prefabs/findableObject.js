@@ -4,7 +4,7 @@ class FindableObject extends ClickableObject
     {
         super(scene,x,y,key,'This seems important')
 
-        //should Overwrite the clickalbe pointerdown event, except I dont think it does, i think its more like a ,also do this type of situation.
+        //Adds logic to the Clickable, tells UI an important object was found.
         this.on('pointerdown', () => {
             this.scene.scene.get('uiScene').foundImportantItem(iDNumber)
             this.scene.scene.start(tranScene)

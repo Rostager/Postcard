@@ -6,18 +6,20 @@ class FileCloseUp extends Phaser.Scene
 
     create()
     {
-        
+        //Start the voice over
         this.voiceOver = this.sound.add('creationVoice', {
             loop: false,
             volume: 0.50
         })
         this.voiceOver.play()
-         this.sceneBG = this.add.image(width/2,playHeight/2,'creationFileCloseUp')
-         this.imgFile = new FindableObject(this,0,61,'creationFileBig','michaelRoomScene',2)
+
+        //Add images and Interactables
+        this.sceneBG = this.add.image(width/2,playHeight/2,'creationFileCloseUp')
+        this.imgFile = new FindableObject(this,0,61,'creationFileBig','michaelRoomScene',2)
 
             
      //USE THIS TO KILL BGM AND OTHER AUDIO
-             this.events.once('shutdown', () => {
+        this.events.once('shutdown', () => {
             this.sound.stopByKey('computerBGM');
             this.voiceOver.stop()
         });
@@ -33,11 +35,13 @@ class FileCloseUp extends Phaser.Scene
         this.typewriterEffect("When I found myself in darkness I created light,\nWhen they found my light they snuffed it,\nWhen I couldn't swim I build a boat,\nSo they poked holes to make me sink,\nWhen I couldn't bear the silence I created noise,\nWhich they muted when they could.\n\nAnd when I created a path out of this darkness with all the\nskills I aquired,\nThey did nothing but smash the ladder,\ntrapping themselves in darkness.")
 
     }
+
+
      typewriterEffect(fullText) {
     // kill the old typing event if one is still running
     if (this.typewriterEvent) {
-        this.typewriterEvent.remove(false);
-        this.typewriterEvent = null;
+        this.typewriterEvent.remove(false)
+        this.typewriterEvent = null
     }
 
     let index = 0;
@@ -49,15 +53,15 @@ class FileCloseUp extends Phaser.Scene
         delay: speed,
         repeat: fullText.length - 1,
         callback: () => {
-            this.descriptionText.setText(this.descriptionText.text + fullText[index]);
-            index++;
+            this.descriptionText.setText(this.descriptionText.text + fullText[index])
+            index++
 
             // cleanup when finished
             if (index >= fullText.length) {
-                this.typewriterEvent = null;
+                this.typewriterEvent = null
             }
         }
-    });
+    })
 }
 
     
