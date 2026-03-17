@@ -4,7 +4,7 @@
 //Date: 3/16/20206
 //All code was made by Robert or Michael stager, with many many references to phaser examples (fr the examples are amazing)
 //Explaining the scene structure: We have lots of scenes because it stems from working together in unity,where if 2 people work in the same file/scene it leads to many merge conflicts, so this was a way to avoid that. And this structure worked very well for the game we where making.
-
+//Who worked on what: We where in the same dorm so we kind opf just communicated what needed to get done in the moment. ALL MUSIC WAS MADE BY MICHAEL THOUGH, AND IM PROUD OF THAT!!!
 
 let config = {
     type: Phaser.AUTO,
@@ -28,18 +28,3 @@ let game = new Phaser.Game(config);
 const {width,height} = game.config
 const playHeight = height * 2/3
 const playWidth = width //might not need this
-
-
-
-
-
-
-
-
-
-/* TO DO
-Complete Empty Room, Highlight creation each canvas switches between 4 images, pic ones that mean something to us, either thumbnails or random art
-Item should be my arm holding various art supplies, you need this before you can click the canvases to switch art
-Once all canvases are a coesive picture a door way opens to the next room
-
-*/
