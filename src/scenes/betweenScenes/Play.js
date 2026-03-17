@@ -28,7 +28,7 @@ class Play extends Phaser.Scene
         this.chainLeft1 = this.add.tileSprite(200,-50 ,0,0,'chain').setAngle(315)
         this.chainLeft2 = this.add.tileSprite(100,75 ,0,0,'chain').setAngle(290)
         this.chainRight1 = this.add.tileSprite(785,-50 ,0,0,'chain').setAngle(-315)
-        this.longTowerRight1 = this.add.image(700,258,'longTower').setOrigin(0.5,1).setScale(0.5)
+       // this.longTowerRight1 = this.add.image(700,258,'longTower').setOrigin(0.5,1).setScale(0.5)
         this.chainRight2 = this.add.tileSprite(885,75 ,0,0,'chain').setAngle(-290)
         this.towerLocked = new ClickableObject(this,459,135,'tower','Maybe I should look around\nsome more')
         
