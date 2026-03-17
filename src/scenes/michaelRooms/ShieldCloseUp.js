@@ -6,32 +6,32 @@ class ShieldCloseUp extends Phaser.Scene
 
     create()
     {
-       //PLAY BGM
+       //PLAY BGM and voice over
         this.bgm = this.sound.add('closeUpBGM', {
             loop: true,
             volume: 0.10
         });
-        this.bgm.play();
+        this.bgm.play()
         this.voiceOver = this.sound.add('ShieldVoice', {
             loop: false,
             volume: 0.50
         })
         this.voiceOver.play()
 
-         this.sceneBG = this.add.image(width/2,playHeight/2,'michaelShieldCloseUp')
-         this.sheild = new FindableObject(this,144,0,'michaelShieldClose','michaelRoomScene',0)
+        //Load images and Interactables
+        this.sceneBG = this.add.image(width/2,playHeight/2,'michaelShieldCloseUp')
+        this.sheild = new FindableObject(this,144,0,'michaelShieldClose','michaelRoomScene',0)
             
     
-         //USE THIS TO KILL BGM AND OTHER AUDIO
-             this.events.once('shutdown', () => {
-            
+        //USE THIS TO KILL BGM AND OTHER AUDIO
+        this.events.once('shutdown', () => {    
             this.bgm.stop()
-            this.voiceOver.stop()
-            
+            this.voiceOver.stop()    
         });
 
-    //FOR TYPEWRITTER EFFECT FOR LETTER
+        //FOR TYPEWRITTER EFFECT FOR LETTER
         this.typewriterEvent = null;
+        //TITLE OF THE POEM
         this.titleText = this.add.text(606,21,'Shield-Bearer Of Mine:',{
             fontFamily:'Georgia',
             fontSize: '15px',
@@ -52,27 +52,27 @@ class ShieldCloseUp extends Phaser.Scene
     typewriterEffect(fullText) {
     // kill the old typing event if one is still running
     if (this.typewriterEvent) {
-        this.typewriterEvent.remove(false);
-        this.typewriterEvent = null;
+        this.typewriterEvent.remove(false)
+        this.typewriterEvent = null
     }
 
-    let index = 0;
-    const speed = 15;
+    let index = 0
+    const speed = 15
 
-    this.descriptionText.setText('');
+    this.descriptionText.setText('')
 
     this.typewriterEvent = this.time.addEvent({
         delay: speed,
         repeat: fullText.length - 1,
         callback: () => {
-            this.descriptionText.setText(this.descriptionText.text + fullText[index]);
+            this.descriptionText.setText(this.descriptionText.text + fullText[index])
             index++;
 
             // cleanup when finished
             if (index >= fullText.length) {
-                this.typewriterEvent = null;
+                this.typewriterEvent = null
             }
         }
-    });
-}
+    })
+    }
 }

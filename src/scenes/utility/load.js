@@ -6,8 +6,7 @@ class Load extends Phaser.Scene
 
     preload()
     {
-       //load images---------------
-      
+       //load images that dont have a Strong room relation---------------
        this.load.image('hudImg','./assets/images/Hud.png')
        this.load.image('backArrow','./assets/images/backArrow.png')
        this.load.image('introBG','./assets/images/introBG.png')
@@ -24,7 +23,7 @@ class Load extends Phaser.Scene
        this.load.image('playButton', './assets/images/playButton.png')
        this.load.image('creditsButton', './assets/images/creditsButton.png')
        this.load.image('title', './assets/images/title.png')
-       //Michaels room
+       //Michaels room---------------------------------
         this.load.image('michaelRoomBG','./assets/images/MichaelRoom/MichaelsRoomBG.png')
         this.load.image('michaelComputer','./assets/images/MichaelRoom/computer.png')
         this.load.image('michaelFurnace','./assets/images/MichaelRoom/furnace.png')
@@ -45,7 +44,7 @@ class Load extends Phaser.Scene
         this.load.image('yoshiSit','./assets/images/MichaelRoom/Yoshi.png')
         this.load.image('izzy','./assets/images/MichaelRoom/izzy.png')
         this.load.image('michael','./assets/images/MichaelRoom/michaelTheMan.png')
-        //FinalLetterRoom
+        //FinalLetterRoom------------------------------
         this.load.image('envelopeFinal','./assets/images/FinalLetterRoom/envelopeFinal.png')
         this.load.image('letterRoomBG','./assets/images/FinalLetterRoom/FinalLetterRoomBackGround.png')
         this.load.image('finalLetterBG','./assets/images/FinalLetterRoom/finalLetterBG.png')
@@ -54,9 +53,7 @@ class Load extends Phaser.Scene
         this.load.image('ironMaidenShut','./assets/images/FinalLetterRoom/IronMaidenShut.png')
         this.load.image('ironMaidenOpen','./assets/images/FinalLetterRoom/IronMaidenOpen.png')
         this.load.image('stamp','./assets/images/sendHomeStamp.png')
-
-
-        //Play Room
+        //Play Room-------------------------------------
         this.load.image('playBG','./assets/images/PlayRoom/PlayBG.png')
         this.load.image('tower','./assets/images/PlayRoom/Tower.png')
         this.load.image('towerCloud','./assets/images/PlayRoom/TowerCloud.png')
@@ -69,13 +66,13 @@ class Load extends Phaser.Scene
         this.load.image('lettersBack','./assets/images/PlayRoom/LetterBack.png')
         this.load.image('sawGround','./assets/images/PlayRoom/SawInGround.png')
         this.load.image('playBG2','./assets/images/PlayRoom/GroundForeground.png')
-        //TowerEntrance
+        //TowerEntrance----------------------------------------
         this.load.image('towerEntranceBG','./assets/images/TowerEntrance/TowerFrontDoor.png')
         this.load.image('mirrorShard','./assets/images/TowerEntrance/MirrorShard.png')
         this.load.image('towerDoorClosed','./assets/images/TowerEntrance/DoorClosed.png')
         this.load.image('towerDoorOpen','./assets/images/TowerEntrance/DoorOpen.png')
         this.load.image('brokenMirror','./assets/images/TowerEntrance/MirrorBroken.png')
-        //Elevator Room
+        //Elevator Room--------------------------------------
         this.load.image('canvasClean', './assets/images/ElevatorRoom/CanvasClean.png')
         this.load.image('canvasPainted', './assets/images/ElevatorRoom/CanvasPainted.png')
         this.load.image('robertArm', './assets/images/ElevatorRoom/RobertArm.png')
@@ -86,25 +83,20 @@ class Load extends Phaser.Scene
         this.load.image('elevatorClosed','./assets/images/ElevatorRoom/ElevatorClosed.png')
         this.load.image('elevatorOpen','./assets/images/ElevatorRoom/ElevatorOpen.png')
         this.load.image('robertStanding','./assets/images/ElevatorRoom/RobertStanding.png')
-
-       
-        this.load.spritesheet('towerMirror','./assets/images/TowerEntrance/MirrorSheet.png',{frameWidth: 204, frameHeight: 300})
-
         //load spritesheets---------------
+        this.load.spritesheet('towerMirror','./assets/images/TowerEntrance/MirrorSheet.png',{frameWidth: 204, frameHeight: 300})
         this.load.spritesheet('mailBox','./assets/images/RobertRoom/MaleBoxAnimatedV2.png',{frameWidth: 180, frameHeight: 250})
         this.load.spritesheet('bottleSheet','./assets/images/PlayRoom/BottleSheet.png',{frameWidth: 427, frameHeight: 425})
         this.load.spritesheet('eyeBlink','./assets/images/TowerEntrance/EyeBlinkSheet.png',{frameWidth: 207, frameHeight: 122})
         this.load.spritesheet('mouthSheet','./assets/images/TowerEntrance/MouthSheet.png',{frameWidth: 207, frameHeight: 135})
         this.load.spritesheet('robertTalking','./assets/images/ElevatorRoom/RobertTalkSheet.png',{frameWidth: 167, frameHeight: 198})
         this.load.spritesheet('letterPortal','./assets/images/LetterPortalSheet.png',{frameWidth: 546, frameHeight: 353})
-
         this.load.spritesheet('canvas1','./assets/images/ElevatorRoom/CanvasSheet1.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas2','./assets/images/ElevatorRoom/CanvasSheet2.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas3','./assets/images/ElevatorRoom/CanvasSheet3.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('canvas4','./assets/images/ElevatorRoom/CanvasSheet4.png',{frameWidth: 147, frameHeight: 184})
         this.load.spritesheet('eyeRoll','./assets/images/TowerEntrance/EyeRollSheet.png',{frameWidth: 207, frameHeight: 135})
         this.load.spritesheet('mouth2Sheet','./assets/images/TowerEntrance/MouthSheet2.png',{frameWidth: 207, frameHeight: 135})
-
         this.load.spritesheet('ironMaiden','./assets/images/FinalLetterRoom/IronMaidenSheet.png',{frameWidth: 246, frameHeight: 339})
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
@@ -138,8 +130,6 @@ class Load extends Phaser.Scene
         this.load.audio('chainsSFX','./assets/sounds/chainsPullingSFX.wav')
         this.load.audio('metalSlamSFX','./assets/sounds/metalSlam.wav')
         this.load.audio('metalOpenSFX','./assets/sounds/metalOpen.wav')
-
-
         //load fonts------------------
         this.load.font('uiFont','./assets/fonts/Faith.ttf')
     }
@@ -176,28 +166,28 @@ class Load extends Phaser.Scene
                 frameRate: 4,
                 repeat: -1
             })
-
+            //Portal animation
             this.anims.create({
                 key: 'letterPortalAnim',
                 frames: this.anims.generateFrameNumbers('letterPortal',{start: 0, end: 9}),
                 frameRate: 5,
                 repeat: -1
             })
-
+            //Robert Talking animation
             this.anims.create({
                 key: 'robertTalkAnim',
                 frames: this.anims.generateFrameNumbers('robertTalking',{start: 0, end: 1}),
                 frameRate: 20,
                 repeat: -1
             })
-
+            //Eye picture animation
             this.anims.create({
                 key: 'rollingEyeAnim',
                 frames: this.anims.generateFrameNumbers('eyeRoll',{start: 0, end: 3}),
                 frameRate: 12,
                 repeat: -1
             })
-
+            //Mouth pictire animation
             this.anims.create({
                 key: 'mouthAnim2',
                 frames: this.anims.generateFrameNumbers('mouth2Sheet',{start: 0, end: 3}),
