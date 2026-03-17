@@ -4,31 +4,29 @@ class TowerEntrance extends Phaser.Scene {
     }
 
     create(){
+        //Move the UI Dot UP
         this.UiScene = this.scene.manager.getScene('uiScene')
         this.UiScene.dot.y = 483    
-         //PLAY BGM
+
+        //PLAY BGM
         this.bgm = this.sound.add('closeUpBGM', {
             loop: true,
             volume: 0.10
-        });
-        this.bgm.play();
-       
-
-
-
+        })
+        this.bgm.play()
+        
+        //Background, Objects, and Clickables
         this.mirrorClicks = 0
         this.mirrorBroken = false
+
         this.towerDoorClickable = new ClickableObject(this, 482, 170, 'towerDoorClosed', "The door is locked tight.").setOrigin(0.5,0.5).setScale(1.2)
         this.towerDoorway = new DoorWay(this, 1500, 135, 'towerDoorClosed', 'towerEntranceScene', 'towerDoorOpen').setOrigin(0.5,0.5).setScale(1.2)
         this.towerEntranceBG = this.add.image(0,0,'towerEntranceBG').setOrigin(0,0)
-
-        //this.towerMirror = this.add.image(30,4,'towerMirror').setOrigin(0,0)
         this.mirror = new ClickableObject (this, 132, 150, 'towerMirror', "Its so fragile...",'glassTap').setOrigin(0.5,0.5)
         this.mirrorBrokenFindable = new FindableObject(this,3000,4 + 150,'towerMirror','mirrorShardCloseUpScene', -1).setOrigin(0.5,0.5).setFrame(3) //Not doorway because its resetting sprite to default
-
         this.eye = new ClickableObject ( this, 805, 69, 'eyeBlink', "Its watching you...").setOrigin(0.5,0.5).play('eyeBlinkAnim')
         this.mouth = new ClickableObject ( this, 805, 215, 'mouthSheet', "It seems to be smiling...").setOrigin(0.5,0.5).play('mouthAnim').setAngle(90).setScale(0.80)
-
+        //Handling of mirror clicks, each click adds a crack to the mirror until it breaks on the 3rd click, then it becomes a findable object
         this.mirror.on('pointerdown', () => {
             if (this.mirrorBroken) return
 
@@ -57,18 +55,10 @@ class TowerEntrance extends Phaser.Scene {
     }
 
     update(){
-        /* Objective: If player clicks the mirror 
-                    add a crack to the glass
-                    play a crack sound
-                    add a tally to a tracker
-                    on the third or 5th crack the mirror breaks 
-                    mirror becomes a findable shard of glass
-        */
-       if (this.mirrorBroken) {
-        this.mirror.x = 1500 //Send it off screen
-        this.mirrorBrokenFindable.x = 132
+        if (this.mirrorBroken) {
+            this.mirror.x = 1500 //Send it off screen
+            this.mirrorBrokenFindable.x = 132
        }
-
     }
 
 }
